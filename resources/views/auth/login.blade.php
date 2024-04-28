@@ -87,7 +87,7 @@
 
             <!-- Submit button -->
             <div class="text-center">
-                <p style="opacity: 0.7; user-select: none;">¿No tienes cuenta? <a href="{{route('register')}}">Registrate</a></p>
+                <p style="opacity: 0.7; user-select: none;">¿No tienes cuenta? <a href="{{ url('/Registro') }}">Registrate</a></p>
             </div>
 
             

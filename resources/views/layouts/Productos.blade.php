@@ -78,7 +78,7 @@
 					<!-- Start Column 2 -->
 					<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
 						<a class="product-item" href="{{ url('/tienda') }}">
-							<img src="images/Sim1 (1).png" class="img-fluid product-thumbnail">
+							<img src="images/Sou_tienda/Playera 01.png" class="img-fluid product-thumbnail">
 							<h3 class="product-title">Simposio Letras Japonesas</h3>
 							<strong class="product-price">Q100.00</strong>
 
@@ -91,8 +91,8 @@
 
 					<!-- Start Column 3 -->
 					<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
-						<a class="product-item" href="cart.html">
-							<img src="images/Sim1 (2).png" class="img-fluid product-thumbnail">
+						<a class="product-item" href="{{ url('/Carito') }}">
+							<img src="images/Sou_tienda/playera 02.png" class="img-fluid product-thumbnail">
 							<h3 class="product-title">Fsociety</h3>
 							<strong class="product-price">Q150.00</strong>
 
@@ -105,8 +105,8 @@
 
 					<!-- Start Column 4 -->
 					<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
-						<a class="product-item" href="cart.html">
-							<img src="images/Dark.png" class="img-fluid product-thumbnail">
+						<a class="product-item" href="{{ url('/Carito') }}">
+							<img src="images/Sou_tienda/Dark.png" class="img-fluid product-thumbnail">
 							<h3 class="product-title">Poster Dark</h3>
 							<strong class="product-price">Q43.00</strong>
 
@@ -133,57 +133,21 @@
 						<p class="mb-4"></p>
 
 						<ul class="list-unstyled custom-social">
-							<li><a href="#"><span class="fa fa-brands fa-facebook-f"></span></a></li>
+							<li><a href="https://www.facebook.com/SistemasUMGXelaPS?mibextid=ZbWKwL"><span class="fa fa-brands fa-facebook-f"></span></a></li>
 							<li><a href="#"><span class="fa fa-brands fa-twitter"></span></a></li>
 							<li><a href="#"><span class="fa fa-brands fa-instagram"></span></a></li>
-							<li><a href="#"><span class="fa fa-brands fa-linkedin"></span></a></li>
+							
 						</ul>
 					</div>
 
-					<div class="col-lg-8">
-						<div class="row links-wrap">
-							<div class="col-6 col-sm-6 col-md-3">
-								<ul class="list-unstyled">
-									<li><a href="#">About us</a></li>
-									<li><a href="#">Services</a></li>
-									<li><a href="#">Blog</a></li>
-									<li><a href="#">Contact us</a></li>
-								</ul>
-							</div>
-
-							<div class="col-6 col-sm-6 col-md-3">
-								<ul class="list-unstyled">
-									<li><a href="#">Support</a></li>
-									<li><a href="#">Knowledge base</a></li>
-									<li><a href="#">Live chat</a></li>
-								</ul>
-							</div>
-
-							<div class="col-6 col-sm-6 col-md-3">
-								<ul class="list-unstyled">
-									<li><a href="#">Jobs</a></li>
-									<li><a href="#">Our team</a></li>
-									<li><a href="#">Leadership</a></li>
-									<li><a href="#">Privacy Policy</a></li>
-								</ul>
-							</div>
-
-							<div class="col-6 col-sm-6 col-md-3">
-								<ul class="list-unstyled">
-									<li><a href="#">Nordic Chair</a></li>
-									<li><a href="#">Kruzo Aero</a></li>
-									<li><a href="#">Ergonomic Chair</a></li>
-								</ul>
-							</div>
-						</div>
-					</div>
+					
 
 				</div>
 
 				<div class="border-top copyright">
 					<div class="row pt-4">
 						<div class="col-lg-6">
-							<p class="mb-2 text-center text-lg-start">Copyright &copy;<script>document.write(new Date().getFullYear());</script>. All Rights Reserved. &mdash; Designed with love by <a href="https://untree.co">Untree.co</a>  Distributed By <a href="https://themewagon.com">ThemeWagon</a> <!-- License information: https://untree.co/license/ -->
+							<p class="mb-2 text-center text-lg-start">Copyright &copy;<script>document.write(new Date().getFullYear());</script>. All Rights Reserved. &mdash;  
             </p>
 						</div>
 

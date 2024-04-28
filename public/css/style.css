@@ -820,6 +820,8 @@ textarea {
     padding: 30px;
     text-align: center;
     border-width: 0px !important;
+
+    
     vertical-align: middle;
     color: rgba(0, 0, 0, 0.8);
     font-size: 18px; }

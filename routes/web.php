@@ -9,8 +9,27 @@ Route::get('/', function () {
 });
 
 Route::get('/Souvenir', function () {
-    /**en el return defino la ruta */
+    /**en el return defino la ruta donde esta el  */
     return view('layouts/Productos');
+});
+
+Route::get('/Carito', function () {
+    /**en el return defino la ruta donde esta el  */
+    return view('layouts/carito');
+});
+Route::get('/Verificacion', function () {
+    /**en el return defino la ruta donde esta el  */
+    return view('layouts/verifi_');
+});
+
+Route::get('/Login', function () {
+    /**en el return defino la ruta donde esta el  */
+    return view('auth/login');
+});
+
+Route::get('/Registro', function () {
+    /**en el return defino la ruta donde esta el  */
+    return view('auth/register');
 });
 
 Auth::routes();
