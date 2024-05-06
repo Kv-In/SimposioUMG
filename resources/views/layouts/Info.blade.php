@@ -22,7 +22,7 @@
 	<body>
 
 		<!-- Start Header/Navigation -->
-		<nav class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark" arial-label="Furni navigation bar">
+        <nav class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark" arial-label="Furni navigation bar">
 
 			<div class="container">
 				<a class="navbar-brand" href="index.html">Simposio<span>.</span></a>
@@ -33,13 +33,13 @@
 
 				<div class="collapse navbar-collapse" id="navbarsFurni">
 					<ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
-						<li class="nav-item active">
+						<li class="nav-item ">
 							<a class="nav-link" href="{{ url('/') }}">Inicio</a>
 						</li>
 						<li><a class="nav-link" href="{{ url('/Souvenir') }}">Souvenir</a></li>
 						<li><a class="nav-link" href="{{ url('/Expositores') }}">Expositores</a></li>
 						<li><a class="nav-link" href="{{ url('/Organizadores') }}">Organizadores</a></li>
-						<li><a class="nav-link" href="{{ url('/Informacion') }}">Informacion</a></li>
+						<li class="active"><a class="nav-link" href="{{ url('/Informacion') }}">Informacion</a></li>
 					</ul>
 					<ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
 						<li><a class="nav-link" href="{{ url('/Login') }}"><img src="images/ic_svg_1/user.svg"></a></li>
@@ -47,6 +47,7 @@
 					</ul>
 				</div>
 			</div>
+				
 		</nav>
 		<!-- End Header/Navigation -->
 		<!-- Start Hero Section -->

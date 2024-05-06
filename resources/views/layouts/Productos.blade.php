@@ -14,7 +14,7 @@
 		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 		<link href="css/tiny-slider.css" rel="stylesheet">
 		<link href="css/style.css" rel="stylesheet">
-		<title>Simposio</title>
+		<title>Simposio 2024</title>
 	</head>
 
 	<body>
@@ -35,15 +35,13 @@
 							<a class="nav-link" href="{{ url('/') }}">Inicio</a>
 						</li>
 						<li class="active"><a class="nav-link" href="{{ url('/Souvenir') }}">Souvenir</a></li>
-						<li><a class="nav-link" href="about.html">About us</a></li>
-						<li><a class="nav-link" href="services.html">Services</a></li>
-						<li><a class="nav-link" href="blog.html">Blog</a></li>
-						<li><a class="nav-link" href="contact.html">Contact us</a></li>
+						<li><a class="nav-link" href="{{ url('/Expositores') }}">Expositores</a></li>
+						<li><a class="nav-link" href="{{ url('/Organizadores') }}">Organizadores</a></li>
+						<li><a class="nav-link" href="{{ url('/Informacion') }}">Informacion</a></li>
 					</ul>
-
 					<ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
-						<li><a class="nav-link" href="#"><img src="images/user.svg"></a></li>
-						<li><a class="nav-link" href="cart.html"><img src="images/cart.svg"></a></li>
+						<li><a class="nav-link" href="{{ url('/Login') }}"><img src="images/ic_svg_1/user.svg"></a></li>
+						<li><a class="nav-link" href="{{ url('/Carito') }}"><img src="images/ic_svg_1/cart.svg"></a></li>
 					</ul>
 				</div>
 			</div>
