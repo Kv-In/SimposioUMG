@@ -8,10 +8,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/Souvenir', function () {
-    /**en el return defino la ruta donde esta el  */
-    return view('layouts/Productos');
-});
+Route::resource('/table-productos', App\Http\Controllers\TableProductoController::class);
+
+
 
 Route::get('/Carito', function () {
     /**en el return defino la ruta donde esta el  */
@@ -33,8 +32,8 @@ Route::get('/Registro', function () {
 });
 
 Auth::routes();
-/*
+
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-*/
+
 
 
