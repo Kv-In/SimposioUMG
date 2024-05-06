@@ -42,17 +42,14 @@
 						<li><a class="nav-link" href="blog.html">Blog</a></li>
 						<li><a class="nav-link" href="contact.html">Contact us</a></li>
 					</ul>
-
 					<ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
-						<li><a class="nav-link" href="{{ url('/Login') }}"><img src="images/user.svg"></a></li>
-						<li><a class="nav-link" href="{{ url('/Carito') }}"><img src="images/cart.svg"></a></li>
+						<li><a class="nav-link" href="{{ url('/Login') }}"><img src="images/ic_svg_1/user.svg"></a></li>
+						<li><a class="nav-link" href="{{ url('/Carito') }}"><img src="images/ic_svg_1/cart.svg"></a></li>
 					</ul>
 				</div>
 			</div>
-				
 		</nav>
 		<!-- End Header/Navigation -->
-
 		<!-- Start Hero Section -->
 			<div class="hero">
 				<div class="container">
@@ -66,7 +63,6 @@
 								<p><a href="" class="btn btn-secondary me-2">Mas...</a><a href="#" class="btn btn-white-outline">Incripciones</a></p>
 							</div>
 						</div>
-						
 						<div class="col-lg-7">
 							<div class="hero-img-wrap">
 								<img src="images/umg.png" class="img-fluid">
@@ -77,8 +73,6 @@
 				</div>
 			</div>
 		<!-- End Hero Section -->
-		
-		
 		<!-- Start Product Section -->
 		<div class="product-section">
 			<div class="container">
@@ -90,9 +84,7 @@
 						>Puedes llevarte un Recuerdo del Simposio 2024 exclusivo y limitado para los participantes ...</p>
 						<p><a href="{{ url('/Souvenir') }}" class="btn">Explore...</a></p>
 					</div> 
-				
 					<!-- End Column 1 -->
-
 					<!-- Start Column 2 -->
 					<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
 						<a class="product-item" href="{{ url('/tienda') }}">
@@ -106,21 +98,18 @@
 						</a>
 					</div> 
 					<!-- End Column 2 -->
-
 					<!-- Start Column 3 -->
 					<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
 						<a class="product-item" href="cart.html">
 							<img src="images/Sou_tienda/playera 02.png" class="img-fluid product-thumbnail">
 							<h3 class="product-title">Fsociety</h3>
 							<strong class="product-price">Q150.00</strong>
-
 							<span class="icon-cross">
 								<img src="images/cross.svg" class="img-fluid">
 							</span>
 						</a>
 					</div>
 					<!-- End Column 3 -->
-
 					<!-- Start Column 4 -->
 					<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
 						<a class="product-item" href="cart.html">
@@ -134,7 +123,6 @@
 						</a>
 					</div>
 					<!-- End Column 4 -->
-					
 				</div>
 			</div>
 		</div>
@@ -154,7 +142,6 @@
 							oportunidad perfecta para impulsar tu carrera. ¡Únete a nosotros y sé p
 								arte del futuro de la ingeniería de sistemas!
 						</p>
-
 						<div class="row my-5">
 							<div class="col-6 col-md-6">
 								<div class="feature">
@@ -166,7 +153,6 @@
 										 de disfrutar de un almuerzo durante el evento!</p>
 								</div>
 							</div>
-
 							<div class="col-6 col-md-6">
 								<div class="feature">
 									<div class="icon">
@@ -180,7 +166,6 @@
 									</p>
 								</div>
 							</div>
-
 							<div class="col-6 col-md-6">
 								<div class="feature">
 									<div class="icon">
@@ -193,7 +178,6 @@
 									</p>
 								</div>
 							</div>
-
 							<div class="col-6 col-md-6">
 								<div class="feature">
 									<div class="icon">
@@ -208,10 +192,8 @@
 									</p>
 								</div>
 							</div>
-
 						</div>
 					</div>
-
 					<div class="col-lg-5">
 						<div class="img-wrap" >
 							<img src="images/img_simposio/Simpsio.jfif" alt="Image" class="img-fluid">
@@ -219,10 +201,7 @@
 						<div class="img-wrap2" >
 							<img src="images/img_simposio/sim3.jfif" alt="Image" class="img-fluid">
 						</div>
-
-						
 					</div>
-
 				</div>
 			</div>
 		</div>
@@ -234,7 +213,6 @@
 				<h2 class="section-title mb-4 text-center p-5 ">Expositores</h2>
 
 				<div class="row">
-
 					<div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-0">
 						<div class="product-item-sm d-flex">
 							<div class="thumbnail">
@@ -247,7 +225,6 @@
 							</div>
 						</div>
 					</div>
-
 					<div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-0">
 						<div class="product-item-sm d-flex">
 							<div class="thumbnail">
@@ -260,7 +237,6 @@
 							</div>
 						</div>
 					</div>
-
 					<div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-0">
 						<div class="product-item-sm d-flex">
 							<div class="thumbnail">
@@ -283,9 +259,7 @@
 		<div class="popular-product">
 			<div class="container">
 				<h2 class="section-title mb-4 text-center p-5 ">Expositores</h2>
-
 				<div class="row">
-
 					<div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-0">
 						<div class="product-item-sm d-flex">
 							<div class="thumbnail">
@@ -298,7 +272,6 @@
 							</div>
 						</div>
 					</div>
-
 					<div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-0">
 						<div class="product-item-sm d-flex">
 							<div class="thumbnail">
@@ -311,7 +284,6 @@
 							</div>
 						</div>
 					</div>
-
 					<div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-0">
 						<div class="product-item-sm d-flex">
 							<div class="thumbnail">
@@ -330,50 +302,37 @@
 		</div>
 		<!-- End Popular Product -->
 
-			
-
 		<!-- Start Footer Section -->
 		<footer class="footer-section">
 			<div class="container relative">
-
 				<div class="row g-5 mb-5">
 					<div class="col-lg-4">
 						<div class="mb-4 footer-logo-wrap"><a href="#" class="footer-logo">Simposio Umg 2024<span>.</span></a></div>
 						<p class="mb-4"></p>
-
 						<ul class="list-unstyled custom-social">
 							<li><a href="https://www.facebook.com/SistemasUMGXelaPS?mibextid=ZbWKwL"><span class="fa fa-brands fa-facebook-f"></span></a></li>
 							<li><a href="#"><span class="fa fa-brands fa-twitter"></span></a></li>
 							<li><a href="#"><span class="fa fa-brands fa-instagram"></span></a></li>
-							
 						</ul>
 					</div>
-
-					
-
 				</div>
-
 				<div class="border-top copyright">
 					<div class="row pt-4">
 						<div class="col-lg-6">
 							<p class="mb-2 text-center text-lg-start">Copyright &copy;<script>document.write(new Date().getFullYear());</script>. All Rights Reserved. &mdash;  
-            </p>
+            				</p>
 						</div>
-
 						<div class="col-lg-6 text-center text-lg-end">
 							<ul class="list-unstyled d-inline-flex ms-auto">
 								<li class="me-4"><a href="#">Terms &amp; Conditions</a></li>
 								<li><a href="#">Privacy Policy</a></li>
 							</ul>
 						</div>
-
 					</div>
 				</div>
-
 			</div>
 		</footer>
 		<!-- End Footer Section -->	
-
 
 		<script src="resources/js/bootstrap.bundle.min.js"></script>
 		<script src="resources/js/tiny-slider.js"></script>

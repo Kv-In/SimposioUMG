@@ -10,7 +10,10 @@ Route::get('/', function () {
 
 Route::resource('/table-productos', App\Http\Controllers\TableProductoController::class);
 
-
+Route::get('/Souvenir', function () {
+    /**en el return defino la ruta donde esta el  */
+    return view('layouts/productos');
+});
 
 Route::get('/Carito', function () {
     /**en el return defino la ruta donde esta el  */

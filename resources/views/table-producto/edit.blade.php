@@ -1,29 +1,39 @@
-@extends('layouts.app')
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ __('Update') }} Table Producto</title>
+    <!-- Incluir los estilos CSS de Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
 
-@section('template_title')
-    {{ __('Update') }} Table Producto
-@endsection
+<section class="content container-fluid">
+    <div class="">
+        <div class="col-md-12">
 
-@section('content')
-    <section class="content container-fluid">
-        <div class="">
-            <div class="col-md-12">
+            <div class="card card-default">
+                <div class="card-header">
+                    <span class="card-title">{{ __('Update') }} Table Producto</span>
+                </div>
+                <div class="card-body bg-white">
+                    <form method="POST" action="{{ route('table-productos.update', $tableProducto->id) }}"  role="form" enctype="multipart/form-data">
+                        {{ method_field('PATCH') }}
+                        @csrf
 
-                <div class="card card-default">
-                    <div class="card-header">
-                        <span class="card-title">{{ __('Update') }} Table Producto</span>
-                    </div>
-                    <div class="card-body bg-white">
-                        <form method="POST" action="{{ route('table-productos.update', $tableProducto->id) }}"  role="form" enctype="multipart/form-data">
-                            {{ method_field('PATCH') }}
-                            @csrf
+                        @include('table-producto.form')
 
-                            @include('table-producto.form')
-
-                        </form>
-                    </div>
+                    </form>
                 </div>
             </div>
         </div>
-    </section>
-@endsection
+    </div>
+</section>
+
+<!-- Incluir el script JavaScript de jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<!-- Incluir los scripts JavaScript de Bootstrap -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
