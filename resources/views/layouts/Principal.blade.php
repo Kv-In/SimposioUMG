@@ -72,59 +72,42 @@
 				</div>
 			</div>
 		<!-- End Hero Section -->
+		
 		<!-- Start Product Section -->
 		<div class="product-section">
 			<div class="container">
-				<div class="row">
-					<!-- Start Column 1 -->
-					<div class="col-md-12 col-lg-3 mb-5 mb-lg-0">
-						<h2 class="mb-4 section-title">Souvenir.</h2>
-						<p class="mb-4"
-						>Puedes llevarte un Recuerdo del Simposio 2024 exclusivo y limitado para los participantes ...</p>
-						<p><a href="{{ url('/Souvenir') }}" class="btn">Explore...</a></p>
-					</div> 
-					<!-- End Column 1 -->
-					<!-- Start Column 2 -->
-					<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
-						<a class="product-item" href="{{ url('/tienda') }}">
-							<img src="images/Sou_tienda/playera 01.png" class="img-fluid product-thumbnail">
-							<h3 class="product-title">Simposio Letras Japonesas</h3>
-							<strong class="product-price">Q100.00</strong>
-
-							<span class="icon-cross">
-								<img src="images/cross.svg" class="img-fluid">
-							</span>
-						</a>
-					</div> 
-					<!-- End Column 2 -->
-					<!-- Start Column 3 -->
-					<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
-						<a class="product-item" href="cart.html">
-							<img src="images/Sou_tienda/playera 02.png" class="img-fluid product-thumbnail">
-							<h3 class="product-title">Fsociety</h3>
-							<strong class="product-price">Q150.00</strong>
-							<span class="icon-cross">
-								<img src="images/cross.svg" class="img-fluid">
-							</span>
-						</a>
-					</div>
-					<!-- End Column 3 -->
-					<!-- Start Column 4 -->
-					<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
-						<a class="product-item" href="cart.html">
-							<img src="images/Sou_tienda/Dark.png" class="img-fluid product-thumbnail">
-							<h3 class="product-title">Poster Dark</h3>
-							<strong class="product-price">Q43.00</strong>
-
-							<span class="icon-cross">
-								<img src="images/cross.svg" class="img-fluid">
-							</span>
-						</a>
-					</div>
-					<!-- End Column 4 -->
+			  <div class="row">
+		  
+				<div class="col-md-12 col-lg-3 mb-5 mb-lg-0">
+				  <h2 class="mb-4 section-title">Souvenir.</h2>
+				  <p class="mb-4">
+					Puedes llevarte un Recuerdo del Simposio 2024 exclusivo y limitado para los participantes ...
+				  </p>
+				  <p><a href="{{ url('/Souvenir') }}" class="btn">Explore...</a></p>
+				</div>
+		  
+				<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
+				  <a class="product-item" href="{{ url('/Carito') }}">
+					@yield('cont1')
+				  </a>
+				</div>
+		  
+				<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
+				  <a class="product-item" href="{{ url('/Carito') }}">
+					@yield('cont2')
+				  </a>
+				</div>
+		  
+				<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
+				  <a class="product-item" href="{{ url('/Carito') }}">
+					@yield('cont3')
+				  </a>
+				</div>
+		  
 				</div>
 			</div>
-		</div>
+		  </div>
+		  
 		
 		<!-- End Product Section -->
 
@@ -336,6 +319,8 @@
 		<script src="resources/js/bootstrap.bundle.min.js"></script>
 		<script src="resources/js/tiny-slider.js"></script>
 		<script src="resources/js/custom.js"></script>
+
+		
 	</body>
 
 </html>

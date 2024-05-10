@@ -524,6 +524,13 @@ a {
 .section-title {
   color: #2f2f2f; }
 
+  .product-description {
+    font-size: 14px; /* Tamaño de fuente más pequeño para la descripción */
+    color: #666; /* Color de texto más suave */
+    margin-top: 5px; /* Espacio superior para separar del título */
+}
+
+
 .product-section {
   padding: 7rem 0; }
   .product-section .product-item {
@@ -537,6 +544,8 @@ a {
       margin-bottom: 30px;
       position: relative;
       top: 0;
+      height: 200px;
+      object-fit: cover;
       -webkit-transition: .3s all ease;
       -o-transition: .3s all ease;
       transition: .3s all ease; }

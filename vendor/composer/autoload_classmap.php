@@ -15,6 +15,7 @@ return array(
     'App\\Http\\Controllers\\Controller' => $baseDir . '/app/Http/Controllers/Controller.php',
     'App\\Http\\Controllers\\HomeController' => $baseDir . '/app/Http/Controllers/HomeController.php',
     'App\\Http\\Controllers\\TableProductoController' => $baseDir . '/app/Http/Controllers/TableProductoController.php',
+    'App\\Http\\Controllers\\mostrarproducto' => $baseDir . '/app/Http/Controllers/mostrarproducto.php',
     'App\\Http\\Requests\\TableProductoRequest' => $baseDir . '/app/Http/Requests/TableProductoRequest.php',
     'App\\Models\\TableProducto' => $baseDir . '/app/Models/TableProducto.php',
     'App\\Models\\User' => $baseDir . '/app/Models/User.php',

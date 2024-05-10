@@ -554,6 +554,7 @@ class ComposerStaticInitda9b7a1dc1dd923105198c572cc7df8d
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
         'App\\Http\\Controllers\\TableProductoController' => __DIR__ . '/../..' . '/app/Http/Controllers/TableProductoController.php',
+        'App\\Http\\Controllers\\mostrarproducto' => __DIR__ . '/../..' . '/app/Http/Controllers/mostrarproducto.php',
         'App\\Http\\Requests\\TableProductoRequest' => __DIR__ . '/../..' . '/app/Http/Requests/TableProductoRequest.php',
         'App\\Models\\TableProducto' => __DIR__ . '/../..' . '/app/Models/TableProducto.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',

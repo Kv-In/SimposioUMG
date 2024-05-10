@@ -10,6 +10,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property $id
  * @property $nombre
  * @property $imagen
+ * @property $precio
  * @property $descripcion
  * @property $created_at
  * @property $updated_at
@@ -27,7 +28,7 @@ class TableProducto extends Model
      *
      * @var array<int, string>
      */
-    protected $fillable = ['nombre', 'imagen', 'descripcion'];
+    protected $fillable = ['nombre', 'imagen', 'precio', 'descripcion'];
 
 
 }

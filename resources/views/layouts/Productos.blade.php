@@ -1,172 +1,203 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="author" content="Untree.co">
-  <link rel="shortcut icon" href="favicon.png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Untree.co">
+    <link rel="shortcut icon" href="favicon.png">
 
-  <meta name="description" content="" />
-  <meta name="keywords" content="bootstrap, bootstrap4" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="bootstrap, bootstrap4" />
 
-		<!-- Bootstrap CSS -->
-		<link href="css/bootstrap.min.css" rel="stylesheet">
-		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-		<link href="css/tiny-slider.css" rel="stylesheet">
-		<link href="css/style.css" rel="stylesheet">
-		<title>Simposio 2024</title>
-	</head>
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="css/tiny-slider.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <title>Simposio 2024</title>
+</head>
 
-	<body>
+<body>
 
-		<!-- Start Header/Navigation -->
-		<nav class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark" arial-label="Furni navigation bar">
+    <!-- Start Header/Navigation -->
+    <nav class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark" arial-label="Furni navigation bar">
 
-			<div class="container">
-				<a class="navbar-brand" href="index.html">Simposio<span>.</span></a>
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Simposio<span>.</span></a>
 
-				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsFurni" aria-controls="navbarsFurni" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-				</button>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsFurni"
+                aria-controls="navbarsFurni" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-				<div class="collapse navbar-collapse" id="navbarsFurni">
-					<ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
-						<li class="nav-item ">
-							<a class="nav-link" href="{{ url('/') }}">Inicio</a>
-						</li>
-						<li class="active"><a class="nav-link" href="{{ url('/Souvenir') }}">Souvenir</a></li>
-						<li><a class="nav-link" href="{{ url('/Expositores') }}">Expositores</a></li>
-						<li><a class="nav-link" href="{{ url('/Organizadores') }}">Organizadores</a></li>
-						<li><a class="nav-link" href="{{ url('/Informacion') }}">Informacion</a></li>
-					</ul>
-					<ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
-						<li><a class="nav-link" href="{{ url('/Login') }}"><img src="images/ic_svg_1/user.svg"></a></li>
-						<li><a class="nav-link" href="{{ url('/Carito') }}"><img src="images/ic_svg_1/cart.svg"></a></li>
-					</ul>
-				</div>
-			</div>
-				
-		</nav>
-		<!-- End Header/Navigation -->
+            <div class="collapse navbar-collapse" id="navbarsFurni">
+                <ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
+                    <li class="nav-item ">
+                        <a class="nav-link" href="{{ url('/') }}">Inicio</a>
+                    </li>
+                    <li class="active"><a class="nav-link" href="{{ url('/Souvenir') }}">Souvenir</a></li>
+                    <li><a class="nav-link" href="{{ url('/Expositores') }}">Expositores</a></li>
+                    <li><a class="nav-link" href="{{ url('/Organizadores') }}">Organizadores</a></li>
+                    <li><a class="nav-link" href="{{ url('/Informacion') }}">Informacion</a></li>
+                </ul>
+                <ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
+                    <li><a class="nav-link" href="{{ url('/Login') }}"><img src="images/ic_svg_1/user.svg"></a></li>
+                    <li><a class="nav-link" href="{{ url('/Carito') }}"><img src="images/ic_svg_1/cart.svg"></a></li>
+                </ul>
+            </div>
+        </div>
 
-		<!-- Start Hero Section -->
-			<div class="hero">
-				
-				<div class="container">
-					<div class="row justify-content-between">
-						<div class="col-lg-5">
-							<div class="intro-excerpt">
-								<h1>Souvenir Simposio 2024</h1>
-							</div>
-						</div>
-						<div class="col-lg-7">
-							
-						</div>
-					</div>
-				</div>
-			</div>
-		<!-- End Hero Section -->
+    </nav>
+    <!-- End Header/Navigation -->
 
-		
+    <!-- Start Hero Section -->
+    <div class="hero">
 
-		<div class="untree_co-section product-section before-footer-section">
-		    <div class="container">
-		      	<div class="row">
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-lg-5">
+                    <div class="intro-excerpt">
+                        <h1>Souvenir Simposio 2024</h1>
+                    </div>
+                </div>
+                <div class="col-lg-7">
 
-					<!-- Start Column 2 -->
-					<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
-						<a class="product-item" href="{{ url('/tienda') }}">
-							<img src="images/Sou_tienda/Playera 01.png" class="img-fluid product-thumbnail">
-							<h3 class="product-title">Simposio Letras Japonesas</h3>
-							<strong class="product-price">Q100.00</strong>
-
-							<span class="icon-cross">
-								<img src="images/cross.svg" class="img-fluid">
-							</span>
-						</a>
-					</div> 
-					<!-- End Column 2 -->
-
-					<!-- Start Column 3 -->
-					<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
-						<a class="product-item" href="{{ url('/Carito') }}">
-							<img src="images/Sou_tienda/playera 02.png" class="img-fluid product-thumbnail">
-							<h3 class="product-title">Fsociety</h3>
-							<strong class="product-price">Q150.00</strong>
-
-							<span class="icon-cross">
-								<img src="images/cross.svg" class="img-fluid">
-							</span>
-						</a>
-					</div>
-					<!-- End Column 3 -->
-
-					<!-- Start Column 4 -->
-					<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
-						<a class="product-item" href="{{ url('/Carito') }}">
-							<img src="images/Sou_tienda/Dark.png" class="img-fluid product-thumbnail">
-							<h3 class="product-title">Poster Dark</h3>
-							<strong class="product-price">Q43.00</strong>
-
-							<span class="icon-cross">
-								<img src="images/cross.svg" class="img-fluid">
-							</span>
-						</a>
-					</div>
-					<!-- End Column 4 -->
-					
-
-		      	</div>
-		    </div>
-		</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Hero Section -->
 
 
-		<!-- Start Footer Section -->
-		<footer class="footer-section">
-			<div class="container relative">
 
-				<div class="row g-5 mb-5">
-					<div class="col-lg-4">
-						<div class="mb-4 footer-logo-wrap"><a href="#" class="footer-logo">Simposio Umg 2024<span>.</span></a></div>
-						<p class="mb-4"></p>
+    <div class="untree_co-section product-section before-footer-section">
+        <div class="container">
+            <div class="row">
 
-						<ul class="list-unstyled custom-social">
-							<li><a href="https://www.facebook.com/SistemasUMGXelaPS?mibextid=ZbWKwL"><span class="fa fa-brands fa-facebook-f"></span></a></li>
-							<li><a href="#"><span class="fa fa-brands fa-twitter"></span></a></li>
-							<li><a href="#"><span class="fa fa-brands fa-instagram"></span></a></li>
-							
-						</ul>
-					</div>
+                <!-- Start Column 2 -->
+                <div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
+                    <a class="product-item" href="{{ url('/Carito') }}">
+                        @foreach ($tableProductosCont1 as $tableProducto)
+                            <img src="{{ $tableProducto->imagen }}" class="img-fluid product-thumbnail">
+                            <h3 class="product-title">{{ $tableProducto->nombre }}</h3>
+							<p class="product-description">{{ $tableProducto->descripcion }}</p>
+                            <strong class="product-price">Q.{{ $tableProducto->precio }}</strong>
+                            <span class="icon-cross">
+                                <img src="images/cross.svg" class="img-fluid">
+                            </span>
+                        @endforeach
+                    </a>
+                </div>
+                <!-- End Column 2 -->
 
-					
+                <!-- Start Column 3 -->
+                <div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
+                    <a class="product-item" href="{{ url('/Carito') }}">
+                        @foreach ($tableProductosCont2 as $tableProducto)
+                            <img src="{{ $tableProducto->imagen }}" class="img-fluid product-thumbnail">
+                            <h3 class="product-title">{{ $tableProducto->nombre }}</h3>
+							<p class="product-description">{{ $tableProducto->descripcion }}</p>
+                            <strong class="product-price">Q.{{ $tableProducto->precio }}</strong>
+                            <span class="icon-cross">
+                                <img src="images/cross.svg" class="img-fluid">
+                            </span>
+                        @endforeach
+                    </a>
+                </div>
+                <!-- End Column 3 -->
 
-				</div>
+                <!-- Start Column 4 -->
+                <div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
+                    <a class="product-item" href="{{ url('/Carito') }}">
+                        @foreach ($tableProductosCont3 as $tableProducto)
+                            <img src="{{ $tableProducto->imagen }}" class="img-fluid product-thumbnail">
+                            <h3 class="product-title">{{ $tableProducto->nombre }}</h3>
+							<p class="product-description">{{ $tableProducto->descripcion }}</p>
+                            <strong class="product-price">Q.{{ $tableProducto->precio }}</strong>
+                            <span class="icon-cross">
+                                <img src="images/cross.svg" class="img-fluid">
+                            </span>
+                        @endforeach
+                    </a>
+                </div>
 
-				<div class="border-top copyright">
-					<div class="row pt-4">
-						<div class="col-lg-6">
-							<p class="mb-2 text-center text-lg-start">Copyright &copy;<script>document.write(new Date().getFullYear());</script>. All Rights Reserved. &mdash;  
-            </p>
-						</div>
+                <!-- End Column 4 -->
 
-						<div class="col-lg-6 text-center text-lg-end">
-							<ul class="list-unstyled d-inline-flex ms-auto">
-								<li class="me-4"><a href="#">Terms &amp; Conditions</a></li>
-								<li><a href="#">Privacy Policy</a></li>
-							</ul>
-						</div>
+				<!-- Start Column 5 -->
+                <div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
+                    <a class="product-item" href="{{ url('/Carito') }}">
+                        @foreach ($tableProductosCont4 as $tableProducto)
+                            <img src="{{ $tableProducto->imagen }}" class="img-fluid product-thumbnail">
+                            <h3 class="product-title">{{ $tableProducto->nombre }}</h3>
+							<p class="product-description">{{ $tableProducto->descripcion }}</p>
+                            <strong class="product-price">Q.{{ $tableProducto->precio }}</strong>
+                            <span class="icon-cross">
+                                <img src="images/cross.svg" class="img-fluid">
+                            </span>
+                        @endforeach
+                    </a>
+                </div>
 
-					</div>
-				</div>
-
-			</div>
-		</footer>
-		<!-- End Footer Section -->	
+                <!-- End Column 5 -->
 
 
-		<script src="js/bootstrap.bundle.min.js"></script>
-		<script src="js/tiny-slider.js"></script>
-		<script src="js/custom.js"></script>
-	</body>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Start Footer Section -->
+    <footer class="footer-section">
+        <div class="container relative">
+
+            <div class="row g-5 mb-5">
+                <div class="col-lg-4">
+                    <div class="mb-4 footer-logo-wrap"><a href="#" class="footer-logo">Simposio Umg
+                            2024<span>.</span></a></div>
+                    <p class="mb-4"></p>
+
+                    <ul class="list-unstyled custom-social">
+                        <li><a href="https://www.facebook.com/SistemasUMGXelaPS?mibextid=ZbWKwL"><span
+                                    class="fa fa-brands fa-facebook-f"></span></a></li>
+                        <li><a href="#"><span class="fa fa-brands fa-twitter"></span></a></li>
+                        <li><a href="#"><span class="fa fa-brands fa-instagram"></span></a></li>
+
+                    </ul>
+                </div>
+
+
+
+            </div>
+
+            <div class="border-top copyright">
+                <div class="row pt-4">
+                    <div class="col-lg-6">
+                        <p class="mb-2 text-center text-lg-start">Copyright &copy;
+                            <script>
+                                document.write(new Date().getFullYear());
+                            </script>. All Rights Reserved. &mdash;
+                        </p>
+                    </div>
+
+                    <div class="col-lg-6 text-center text-lg-end">
+                        <ul class="list-unstyled d-inline-flex ms-auto">
+                            <li class="me-4"><a href="#">Terms &amp; Conditions</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </footer>
+    <!-- End Footer Section -->
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/tiny-slider.js"></script>
+    <script src="js/custom.js"></script>
+</body>
 
 </html>

@@ -4,9 +4,9 @@ use Illuminate\Support\Facades\Route;
 
 
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [App\Http\Controllers\viewprodController::class, 'index']);
+
+Route::get('/Souvenir', [App\Http\Controllers\viewprodController::class, 'indexSouv']);
 
 Route::resource('/table-productos', App\Http\Controllers\TableProductoController::class);
 
@@ -25,10 +25,7 @@ Route::get('/Organizadores', function () {
     return view('layouts/Team');
 });
 
-Route::get('/Souvenir', function () {
-    /**en el return defino la ruta donde esta el  */
-    return view('layouts/productos');
-});
+
 
 Route::get('/Carito', function () {
     /**en el return defino la ruta donde esta el  */

@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ __('Update') }} Table Producto</title>
+    <title>{{ __('') }} Table Producto</title>
     <!-- Incluir los estilos CSS de Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
+
+    <h1 class="text-center text-secondary font-weight-bold p-5"> Editar Productos</h1>
 
 <section class="content container-fluid">
     <div class="">
@@ -15,7 +17,10 @@
 
             <div class="card card-default">
                 <div class="card-header">
-                    <span class="card-title">{{ __('Update') }} Table Producto</span>
+                    <span class="card-title">{{ __('Editar') }}</span>
+                    <div class="float-right">
+                        <a class="btn btn-outline-dark btn-sm" href="{{ route('table-productos.index') }}"> {{ __('Back') }}</a>
+                    </div>
                 </div>
                 <div class="card-body bg-white">
                     <form method="POST" action="{{ route('table-productos.update', $tableProducto->id) }}"  role="form" enctype="multipart/form-data">

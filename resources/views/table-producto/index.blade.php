@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap CRUD Data Table for Database with Modal Form</title>
+    <title>Crud Producto</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -14,31 +14,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="css/stylecrud.css">
 
-    <script>
-        $(document).ready(function() {
-            // Activate tooltip
-            $('[data-toggle="tooltip"]').tooltip();
-
-            // Select/Deselect checkboxes
-            var checkbox = $('table tbody input[type="checkbox"]');
-            $("#selectAll").click(function() {
-                if (this.checked) {
-                    checkbox.each(function() {
-                        this.checked = true;
-                    });
-                } else {
-                    checkbox.each(function() {
-                        this.checked = false;
-                    });
-                }
-            });
-            checkbox.click(function() {
-                if (!this.checked) {
-                    $("#selectAll").prop("checked", false);
-                }
-            });
-        });
-    </script>
+    
 </head>
 
 <body>
@@ -55,7 +31,7 @@
 
                         <div class="col-xs-6">
                             <a href="{{ route('table-productos.create') }}" class="btn btn-success" data-toggle="modal"><i
-                                    class="material-icons">&#xE147;</i> <span>Add New Employee</span></a>
+                                    class="material-icons">&#xE147;</i> <span>Añadir Registro</span></a>
                             
                         </div>
 
@@ -67,10 +43,7 @@
                     <thead>
                         <tr>
                             <th>
-                                <span class="custom-checkbox">
-                                    <input type="checkbox" id="selectAll">
-                                    <label for="selectAll"></label>
-                                </span>
+                                
                             </th>
                             <th>id</th>
                             <th>Nombre</th>
@@ -83,55 +56,54 @@
 
 
                     <tbody>
+                        @foreach ($tableProductos as $tableProducto)
                         <tr>
-                            @foreach ($tableProductos as $tableProducto)
-                                <td>
-                                    <span class="custom-checkbox">
-                                        <input type="checkbox" id="checkbox1" name="options[]" value="1">
-                                        <label for="checkbox1"></label>
-                                    </span>
-                                </td>
-                                <td>{{ ++$i }}</td>
-                                <td>{{ $tableProducto->nombre }}</td>
-
-                                <td>
-                                    <!--
-                                      <img style=" width: 60px;"
-                                    src="data:image/jpg;base64,<?= base64_encode($tableProducto->nombre) ?>" alt="">
-
-                                      -->
-                                    <img style="width: 100px;" src="{{ $tableProducto->imagen }}" alt="">
-
-                                </td>
-
-                                <td>{{ $tableProducto->descripcion }}</td>
-
+                           
                                 <td></td>
+                                <td>
+                                    {{++$i}}
+                                </td>
 
                                 <td>
+                                    {{ $tableProducto->nombre }}
+                                </td>
+
+                                <td>
+                                    
+                                   <img style="width: 100px;" src="{{ $tableProducto->imagen }}" alt="">
+                                </td>
+
+                                <td>
+                                    {{ $tableProducto->descripcion }}
+                                </td>
+
+                                <td>
+                                    Q.{{ $tableProducto->precio }}
+                                </td>
+                              
                                 <td>
 
 
                                     <form action="{{ route('table-productos.destroy', $tableProducto->id) }}"
                                         method="POST">
-                                        <a class="btn btn-sm btn-primary "
+                                        <a class="btn btn-outline-primary "
                                             href="{{ route('table-productos.show', $tableProducto->id) }}"><i
-                                                class="fa fa-fw fa-eye"></i> {{ __('Show') }}</a>
-                                        <a class="btn btn-sm btn-success"
+                                                class="fa fa-fw fa-eye"></i> {{ __('') }}</a>
+                                        <a class="btn btn-outline-success"
                                             href="{{ route('table-productos.edit', $tableProducto->id) }}"><i
-                                                class="fa fa-fw fa-edit"></i> {{ __('Edit') }}</a>
+                                                class="fa fa-fw fa-edit"></i> {{ __('') }}</a>
                                     </form>
-                                    <button type="submit" class="btn btn-danger btn-sm"
+                                    <button type="submit" class="btn btn-outline-danger"
                                         onclick="abrirModalConfirmacion()">
-                                        <i class="fa fa-fw fa-trash"></i> {{ __('Delete') }}
+                                        <i class="fa fa-fw fa-trash"></i> {{ __('') }}
                                     </button>
                                 </td>
 
-                                </td>
+                                 
                         </tr>
 
                         </tr>
-                        @endforeach
+                        @endforeach 
                     </tbody>
 
 
@@ -139,10 +111,9 @@
                     <div id="deleteEmployeeModal" class="modal fade">
                         <div class="modal-dialog">
                             <div class="modal-content">
-                                <form id="confirmDeleteForm"
                                 
-                                    action="{{ route('table-productos.destroy', $tableProducto->id) }}"
-                                    method="POST">
+                                <form id="confirmDeleteForm"                            
+                                action="{{ route('table-productos.destroy', $tableProducto->id) }}" method="POST">
                                     @csrf
                                     @method('DELETE')
                                     <div class="modal-header">
@@ -159,8 +130,9 @@
                                             value="Cancelar">
                                         <button type="submit" class="btn btn-danger">Eliminar</button>
                                     </div>
-                                </form>
+                                </>
                             </div>
+                            
                         </div>
                     </div>
 
