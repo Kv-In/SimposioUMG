@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="author" content="Untree.co">
-  
+
   <link rel="shortcut icon" href="favicon.png">
 
   <meta name="description" content="" />
@@ -25,7 +25,7 @@
         <nav class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark" arial-label="Furni navigation bar">
 
 			<div class="container">
-				<a class="navbar-brand" href="index.html">Simposio<span>.</span></a>
+				<a class="navbar-brand" href="/">Simposio<span>.</span></a>
 
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsFurni" aria-controls="navbarsFurni" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
@@ -47,7 +47,7 @@
 					</ul>
 				</div>
 			</div>
-				
+
 		</nav>
 		<!-- End Header/Navigation -->
 		<!-- Start Hero Section -->
@@ -68,7 +68,7 @@
 								<img src="images/umg.png" class="img-fluid">
 							</div>
 						</div>
-						
+
 					</div>
 				</div>
 			</div>
@@ -83,7 +83,7 @@
 						<p class="mb-4"
 						>Puedes llevarte un Recuerdo del Simposio 2024 exclusivo y limitado para los participantes ...</p>
 						<p><a href="{{ url('/Souvenir') }}" class="btn">Explore...</a></p>
-					</div> 
+					</div>
 					<!-- End Column 1 -->
 					<!-- Start Column 2 -->
 					<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
@@ -96,7 +96,7 @@
 								<img src="images/cross.svg" class="img-fluid">
 							</span>
 						</a>
-					</div> 
+					</div>
 					<!-- End Column 2 -->
 					<!-- Start Column 3 -->
 					<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
@@ -126,7 +126,7 @@
 				</div>
 			</div>
 		</div>
-		
+
 		<!-- End Product Section -->
 
 		<!-- Start Why Choose Us Section -->
@@ -136,9 +136,9 @@
 					<div class="col-lg-6">
 						<h2 class="section-title">¡No te Pierdas del Simposio de Ingeniería en Sistemas Umg2024!</h2>
 						<p>
-							¿Buscas inspiración, aprendizaje y oportunidades en ingeniería de sistemas? 
-							¡El Simposio de Ingeniería en Sistemas de la Universidad Umg es tu evento! 
-							Con charlas de expertos, networking y actualización profesional, es la 
+							¿Buscas inspiración, aprendizaje y oportunidades en ingeniería de sistemas?
+							¡El Simposio de Ingeniería en Sistemas de la Universidad Umg es tu evento!
+							Con charlas de expertos, networking y actualización profesional, es la
 							oportunidad perfecta para impulsar tu carrera. ¡Únete a nosotros y sé p
 								arte del futuro de la ingeniería de sistemas!
 						</p>
@@ -161,7 +161,7 @@
 									<h3>Expositores del Evento</h3>
 									<p>
 										Durante el evento, tendrás la oportunidad de interactuar
-										 con una diversidad de expositores provenientes de 
+										 con una diversidad de expositores provenientes de
 										 diferentes áreas de la ingeniería y disciplinas relacionadas.
 									</p>
 								</div>
@@ -184,10 +184,10 @@
 										<img src="images/ic_svg_1/ticket.svg" alt="Image" class="imf-fluid">
 									</div>
 									<h3>Cupos limitados</h3>
-									<p> 
-										Cupos limitados para esta actividad que 
+									<p>
+										Cupos limitados para esta actividad que
 										ocurre solo una vez al año. No te quedes
-										 sin la experiencia de participar y aprender 
+										 sin la experiencia de participar y aprender
 										 sobre el tema que tanto te interesa.
 									</p>
 								</div>
@@ -249,7 +249,7 @@
 							</div>
 						</div>
 					</div>
-					
+
 				</div>
 			</div>
 		</div>
@@ -296,7 +296,7 @@
 							</div>
 						</div>
 					</div>
-					
+
 				</div>
 			</div>
 		</div>
@@ -319,7 +319,7 @@
 				<div class="border-top copyright">
 					<div class="row pt-4">
 						<div class="col-lg-6">
-							<p class="mb-2 text-center text-lg-start">Copyright &copy;<script>document.write(new Date().getFullYear());</script>. All Rights Reserved. &mdash;  
+							<p class="mb-2 text-center text-lg-start">Copyright &copy;<script>document.write(new Date().getFullYear());</script>. All Rights Reserved. &mdash;
             				</p>
 						</div>
 						<div class="col-lg-6 text-center text-lg-end">
@@ -332,7 +332,7 @@
 				</div>
 			</div>
 		</footer>
-		<!-- End Footer Section -->	
+		<!-- End Footer Section -->
 
 		<script src="resources/js/bootstrap.bundle.min.js"></script>
 		<script src="resources/js/tiny-slider.js"></script>

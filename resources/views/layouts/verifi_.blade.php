@@ -23,7 +23,7 @@
 		<nav class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark" arial-label="Furni navigation bar">
 
 			<div class="container">
-				<a class="navbar-brand" href="index.html">Simposio<span>.</span></a>
+				<a class="navbar-brand" href="/">Simposio<span>.</span></a>
 
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsFurni" aria-controls="navbarsFurni" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
@@ -45,7 +45,7 @@
 					</ul>
 				</div>
 			</div>
-				
+
 		</nav>
 		<!-- End Header/Navigation -->
 
@@ -59,7 +59,7 @@
 							</div>
 						</div>
 						<div class="col-lg-7">
-							
+
 						</div>
 					</div>
 				</div>
@@ -82,15 +82,15 @@
 		            <div class="form-group">
 		              <label for="c_country" class="text-black">Country <span class="text-danger">*</span></label>
 		              <select id="c_country" class="form-control">
-		                <option value="1">Select a country</option>    
-		                <option value="2">bangladesh</option>    
-		                <option value="3">Algeria</option>    
-		                <option value="4">Afghanistan</option>    
-		                <option value="5">Ghana</option>    
-		                <option value="6">Albania</option>    
-		                <option value="7">Bahrain</option>    
-		                <option value="8">Colombia</option>    
-		                <option value="9">Dominican Republic</option>    
+		                <option value="1">Select a country</option>
+		                <option value="2">bangladesh</option>
+		                <option value="3">Algeria</option>
+		                <option value="4">Afghanistan</option>
+		                <option value="5">Ghana</option>
+		                <option value="6">Albania</option>
+		                <option value="7">Bahrain</option>
+		                <option value="8">Colombia</option>
+		                <option value="9">Dominican Republic</option>
 		              </select>
 		            </div>
 		            <div class="form-group row">
@@ -166,15 +166,15 @@
 		                  <div class="form-group">
 		                    <label for="c_diff_country" class="text-black">Country <span class="text-danger">*</span></label>
 		                    <select id="c_diff_country" class="form-control">
-		                      <option value="1">Select a country</option>    
-		                      <option value="2">bangladesh</option>    
-		                      <option value="3">Algeria</option>    
-		                      <option value="4">Afghanistan</option>    
-		                      <option value="5">Ghana</option>    
-		                      <option value="6">Albania</option>    
-		                      <option value="7">Bahrain</option>    
-		                      <option value="8">Colombia</option>    
-		                      <option value="9">Dominican Republic</option>    
+		                      <option value="1">Select a country</option>
+		                      <option value="2">bangladesh</option>
+		                      <option value="3">Algeria</option>
+		                      <option value="4">Afghanistan</option>
+		                      <option value="5">Ghana</option>
+		                      <option value="6">Albania</option>
+		                      <option value="7">Bahrain</option>
+		                      <option value="8">Colombia</option>
+		                      <option value="9">Dominican Republic</option>
 		                    </select>
 		                  </div>
 
@@ -437,7 +437,7 @@
 
 			</div>
 		</footer>
-		<!-- End Footer Section -->	
+		<!-- End Footer Section -->
 
 
 		<script src="js/bootstrap.bundle.min.js"></script>

@@ -23,7 +23,7 @@
 		<nav class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark" arial-label="Furni navigation bar">
 
 			<div class="container">
-				<a class="navbar-brand" href="index.html">Simposio<span>.</span></a>
+				<a class="navbar-brand" href="/">Simposio<span>.</span></a>
 
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsFurni" aria-controls="navbarsFurni" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
@@ -45,7 +45,7 @@
 					</ul>
 				</div>
 			</div>
-				
+
 		</nav>		<!-- End Header/Navigation -->
 
 		<!-- Start Hero Section -->
@@ -58,14 +58,14 @@
 							</div>
 						</div>
 						<div class="col-lg-7">
-							
+
 						</div>
 					</div>
 				</div>
 			</div>
 		<!-- End Hero Section -->
 
-		
+
 
 		<div class="untree_co-section before-footer-section">
             <div class="container">
@@ -102,12 +102,12 @@
                                 <button class="btn btn-outline-black increase" type="button">&plus;</button>
                               </div>
                             </div>
-        
+
                           </td>
                           <td>$49.00</td>
                           <td><a href="#" class="btn btn-black btn-sm">X</a></td>
                         </tr>
-        
+
                         <tr>
                           <td class="product-thumbnail">
                             <img src="images/product-2.png" alt="Image" class="img-fluid">
@@ -126,7 +126,7 @@
                                 <button class="btn btn-outline-black increase" type="button">&plus;</button>
                               </div>
                             </div>
-        
+
                           </td>
                           <td>$49.00</td>
                           <td><a href="#" class="btn btn-black btn-sm">X</a></td>
@@ -136,7 +136,7 @@
                   </div>
                 </form>
               </div>
-        
+
               <div class="row">
                 <div class="col-md-6">
                   <div class="row mb-5">
@@ -184,7 +184,7 @@
                           <strong class="text-black">$230.00</strong>
                         </div>
                       </div>
-        
+
                       <div class="row">
                         <div class="col-md-12">
                             <a href="{{ url('/Verificacion') }}" class="btn btn-black btn-lg py-3 btn-block">Proceed To Checkout</a>
@@ -196,7 +196,7 @@
               </div>
             </div>
           </div>
-		
+
 
 		<!-- Start Footer Section -->
 		<footer class="footer-section">
@@ -301,7 +301,7 @@
 
 			</div>
 		</footer>
-		<!-- End Footer Section -->	
+		<!-- End Footer Section -->
 
 
 		<script src="js/bootstrap.bundle.min.js"></script>

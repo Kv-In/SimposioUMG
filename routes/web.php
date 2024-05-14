@@ -17,7 +17,7 @@ Route::get('/Expositores', function () {
 
 Route::get('/Informacion', function () {
     /**en el return defino la ruta donde esta el  */
-    return view('layouts/info');
+    return view('layouts/Info');
 });
 
 Route::get('/Organizadores', function () {
