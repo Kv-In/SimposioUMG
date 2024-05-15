@@ -11,7 +11,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
     <link rel="icon" href="{{ asset('img/icono.svg') }}" type="image/x-icon">
     
 </head>
@@ -23,8 +23,8 @@
             <div class="row d-flex justify-content-center align-items-center h-100">
                 <div class="col-md-8 col-lg-7 col-xl-6">
                     <!-- imagen de registro -->
-                    <img src="img/sim.jpg"
-                        class="img-fluid" alt="Phone image">
+                    <img src="images/Logo.png"
+                        class="img-fluid" alt="Image">
                 </div>
 
                 <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
@@ -97,4 +97,14 @@
                         </div>
 
                     </form>
-                </
+
+            </div>
+        </section>
+    
+        <!-- Bootstrap JS y otros scripts -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-RL4J+0pM41s1Jvr0T8+qF8FZMH7f4Bnpoqw1w7YqGF6qZv7ho1PQSt6BwU0votgE" crossorigin="anonymous"></script>
+    </body>
+    
+    </html>
+    
