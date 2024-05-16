@@ -77,70 +77,23 @@
 
                 <!-- Start Column 2 -->
                 <div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
-                    <a class="product-item" href="{{ url('/Carito') }}">
-                        @foreach ($tableProductosCont1 as $tableProducto)
-                            <img src="{{ $tableProducto->imagen }}" class="img-fluid product-thumbnail">
-                            <h3 class="product-title">{{ $tableProducto->nombre }}</h3>
-							<p class="product-description">{{ $tableProducto->descripcion }}</p>
-                            <strong class="product-price">Q.{{ $tableProducto->precio }}</strong>
-                            <span class="icon-cross">
-                                <img src="images/cross.svg" class="img-fluid">
-                            </span>
+                    <div class="products-item">
+                        @foreach ($products as $tableProducto)
+                            <div class="product-item" key="{{$tableProducto->id}}">
+                                <img src="{{ $tableProducto->imagen }}" class="img-fluid product-thumbnail">
+                                <h3 class="product-title">{{ $tableProducto->nombre }}</h3>
+                                <p class="product-description">{{ $tableProducto->descripcion }}</p>
+                                <strong class="product-price">Q.{{ $tableProducto->precio }}</strong>
+                                <button>
+                                    <span class="icon-cross">
+                                    <img src="images/cross.svg" class="img-fluid">
+                                    </span>
+                                </button>
+                            </div>
                         @endforeach
-                    </a>
+                    </div>
                 </div>
                 <!-- End Column 2 -->
-
-                <!-- Start Column 3 -->
-                <div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
-                    <a class="product-item" href="{{ url('/Carito') }}">
-                        @foreach ($tableProductosCont2 as $tableProducto)
-                            <img src="{{ $tableProducto->imagen }}" class="img-fluid product-thumbnail">
-                            <h3 class="product-title">{{ $tableProducto->nombre }}</h3>
-							<p class="product-description">{{ $tableProducto->descripcion }}</p>
-                            <strong class="product-price">Q.{{ $tableProducto->precio }}</strong>
-                            <span class="icon-cross">
-                                <img src="images/cross.svg" class="img-fluid">
-                            </span>
-                        @endforeach
-                    </a>
-                </div>
-                <!-- End Column 3 -->
-
-                <!-- Start Column 4 -->
-                <div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
-                    <a class="product-item" href="{{ url('/Carito') }}">
-                        @foreach ($tableProductosCont3 as $tableProducto)
-                            <img src="{{ $tableProducto->imagen }}" class="img-fluid product-thumbnail">
-                            <h3 class="product-title">{{ $tableProducto->nombre }}</h3>
-							<p class="product-description">{{ $tableProducto->descripcion }}</p>
-                            <strong class="product-price">Q.{{ $tableProducto->precio }}</strong>
-                            <span class="icon-cross">
-                                <img src="images/cross.svg" class="img-fluid">
-                            </span>
-                        @endforeach
-                    </a>
-                </div>
-
-                <!-- End Column 4 -->
-
-				<!-- Start Column 5 -->
-                <div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
-                    <a class="product-item" href="{{ url('/Carito') }}">
-                        @foreach ($tableProductosCont4 as $tableProducto)
-                            <img src="{{ $tableProducto->imagen }}" class="img-fluid product-thumbnail">
-                            <h3 class="product-title">{{ $tableProducto->nombre }}</h3>
-							<p class="product-description">{{ $tableProducto->descripcion }}</p>
-                            <strong class="product-price">Q.{{ $tableProducto->precio }}</strong>
-                            <span class="icon-cross">
-                                <img src="images/cross.svg" class="img-fluid">
-                            </span>
-                        @endforeach
-                    </a>
-                </div>
-
-                <!-- End Column 5 -->
-
 
             </div>
         </div>
@@ -198,6 +151,7 @@
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/tiny-slider.js"></script>
     <script src="js/custom.js"></script>
+    <script src="js/shopping_cart/souvenir_page.js" type="module"></script>
 </body>
 
 </html>
