@@ -46,6 +46,8 @@ Route::get('/Registro', function () {
     return view('auth/register');
 });
 
+
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
