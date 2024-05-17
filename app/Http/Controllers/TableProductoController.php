@@ -37,7 +37,23 @@ class TableProductoController extends Controller
      */
     public function store(TableProductoRequest $request): RedirectResponse
     {
-        TableProducto::create($request->validated());
+        //dd($request->all());
+
+        $newProduct = new TableProducto();
+
+        if ($request->hasFile('imagen')) {
+            $file = $request->file('imagen');
+            $destinationPath = 'images/products/';
+            $filename = time() . $file->getClientOriginalName();
+            $uploadFile = $request->file('imagen')->move($destinationPath, $filename);
+            $newProduct->imagen = $destinationPath . $filename;
+        }
+
+        $newProduct->nombre = $request->nombre;
+        $newProduct->descripcion = $request->descripcion;
+        $newProduct->precio = $request->precio;
+        $newProduct->save();
+
 
         return Redirect::route('table-productos.index')
             ->with('success', 'TableProducto created successfully.');

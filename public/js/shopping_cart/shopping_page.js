@@ -14,7 +14,7 @@ totalProductsValue.subscribe(newValue => {
 
 shoppingCart.getProducts().forEach(product => {
     const row = document.createElement('tr')
-
+    console.log(product);
     const removeButton = document.createElement('button')
     removeButton.innerText = 'X'
     removeButton.classList.add('btn')
@@ -50,7 +50,7 @@ shoppingCart.getProducts().forEach(product => {
 
     row.innerHTML = `
         <td class="product-thumbnail">
-            <img src="images/product-1.png" alt="Image" class="img-fluid">
+            <img src="${product.image}" alt="Image" class="img-fluid">
         </td>
         <td class="product-name">
             <h2 class="h5 text-black">${product.name}</h2>

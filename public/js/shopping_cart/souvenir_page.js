@@ -11,17 +11,19 @@ productsCard.forEach(product => {
     const nameProduct = product.children[1].innerText
     const descriptionProduct = product.children[2].innerText
     const priceProduct = product.children[3].innerText
+    const productImage = product.children[0].src
 
     addProductButton.addEventListener('click', (e) => {
         addProductToCart(e,{
         id,
         name: nameProduct,
         description: descriptionProduct,
-        price: priceProduct})
+        price: priceProduct,
+        image: productImage,})
     })
 })
 
-const addProductToCart = (e, {id, name, description, price}) => {
+const addProductToCart = (e, {id, name, description, price, image}) => {
     e.preventDefault()
 
     const cleanPrice = removePriceSymbol({price})
@@ -34,6 +36,7 @@ const addProductToCart = (e, {id, name, description, price}) => {
             description,
             price: cleanPrice,
             quantity: 1,
+            image,
         }
         console.log('el producto es ', product)
 
@@ -43,10 +46,4 @@ const addProductToCart = (e, {id, name, description, price}) => {
     }
 
     window.location.assign(SHOPPING_CART_URL)
-
-    // const choice = confirm('desea ir al carrito')
-    //
-    // if (choice) {
-    //     window.location.assign(SHOPPING_CART_URL)
-    // }
 }

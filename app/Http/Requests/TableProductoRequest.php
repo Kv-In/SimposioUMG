@@ -23,7 +23,7 @@ class TableProductoRequest extends FormRequest
     {
         return [
 			'nombre' => 'required|string',
-			'imagen' => 'string',
+			'imagen' => 'file|required',
 			'precio' => 'required',
 			'descripcion' => 'required|string',
         ];
