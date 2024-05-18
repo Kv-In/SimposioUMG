@@ -37,7 +37,12 @@ class TableProductoController extends Controller
      */
     public function store(TableProductoRequest $request): RedirectResponse
     {
-        //dd($request->all());
+        $request->validate([
+            'Nombre' => 'required|string|max:255',
+            'url' => 'required|image|max:2048',
+            'Lider' => 'nullable|string|max:255',
+            'Equipo' => 'nullable|string|max:255',
+        ]);
 
         $newProduct = new TableProducto();
 

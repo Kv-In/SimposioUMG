@@ -9,6 +9,8 @@ Route::get('/', [App\Http\Controllers\viewprodController::class, 'index']);
 Route::get('/Souvenir', [App\Http\Controllers\viewprodController::class, 'indexSouv']);
 
 Route::resource('/table-productos', App\Http\Controllers\TableProductoController::class);
+Route::resource('/table-organizadores', App\Http\Controllers\TableOrganizadoreController::class);
+Route::resource('/table-expositores', App\Http\Controllers\TableExpositoreController::class);
 
 Route::get('/Expositores', function () {
     /**en el return defino la ruta donde esta el  */

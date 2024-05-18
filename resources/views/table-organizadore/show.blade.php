@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ $tableProducto->name ?? __('') . ' ' . __('Table Producto') }}</title>
+    <title> {{ $tableOrganizadore->name ?? __('Show') . ' ' . __('Table Organizadore') }}</title>
     <!-- Incluir los estilos CSS de Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 
 <body>
-    <h1 class="text-center text-secondary font-weight-bold p-5"> Visualizacion Productos</h1>
+    <h1 class="text-center text-secondary font-weight-bold p-5"> Visualizacion Organizadores y Colavoradores</h1>
 
     <section class="content container-fluid">
         <div class="row">
@@ -22,7 +22,7 @@
                             <span class="card-title">{{ __('Visualizacion') }}</span>
                         </div>
                         <div class="float-right">
-                            <a class="btn btn-outline-dark btn-sm" href="{{ route('table-productos.index') }}">
+                            <a class="btn btn-outline-dark btn-sm" href="{{ route('table-organizadores.index') }}">
                                 {{ __('Back') }}</a>
                         </div>
                     </div>
@@ -31,28 +31,27 @@
 
                         <div class="form-group mb-2 mb20">
                             <strong>Nombre:</strong>
-                            {{ $tableProducto->nombre }}
+                            {{ $tableOrganizadore->Nombre }}
                         </div>
                         <div>
-                            @if (!empty($tableProducto->imagen))
-                                <img style="width: 250px;" src="{{ asset($$tableProducto->imagen) }}"
-                                    alt="Imagen de {{ $$tableProducto->nombre }}">
+                            @if (!empty($tableOrganizadore->url))
+                                <img style="width: 250px;" src="{{ asset($tableOrganizadore->url) }}"
+                                    alt="Imagen de {{ $tableOrganizadore->Nombre }}">
                             @else
                                 <p>No hay imagen disponible.</p>
                             @endif
                         </div>
                         <div class="form-group mb-2 mb20">
-
-                            <strong>Imagen:</strong>
-                            {{ $tableProducto->imagen }}
+                            <strong>Url:</strong>
+                            {{ $tableOrganizadore->url }}
                         </div>
                         <div class="form-group mb-2 mb20">
-                            <strong>Precio:</strong>
-                            {{ $tableProducto->precio }}
+                            <strong>Lider:</strong>
+                            {{ $tableOrganizadore->Lider }}
                         </div>
                         <div class="form-group mb-2 mb20">
-                            <strong>Descripcion:</strong>
-                            {{ $tableProducto->descripcion }}
+                            <strong>Equipo:</strong>
+                            {{ $tableOrganizadore->Equipo }}
                         </div>
 
                     </div>

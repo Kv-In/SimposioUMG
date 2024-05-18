@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ $tableProducto->name ?? __('') . ' ' . __('Table Producto') }}</title>
+    <title> {{ $tableExpositore->name ?? __('') . " " . __('Table Expositore') }}</title>
     <!-- Incluir los estilos CSS de Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 
 <body>
-    <h1 class="text-center text-secondary font-weight-bold p-5"> Visualizacion Productos</h1>
+    <h1 class="text-center text-secondary font-weight-bold p-5"> Visualizacion Expositore</h1>
 
     <section class="content container-fluid">
         <div class="row">
@@ -22,7 +22,7 @@
                             <span class="card-title">{{ __('Visualizacion') }}</span>
                         </div>
                         <div class="float-right">
-                            <a class="btn btn-outline-dark btn-sm" href="{{ route('table-productos.index') }}">
+                            <a class="btn btn-outline-dark btn-sm" href="{{ route('table-expositores.index') }}">
                                 {{ __('Back') }}</a>
                         </div>
                     </div>
@@ -31,28 +31,47 @@
 
                         <div class="form-group mb-2 mb20">
                             <strong>Nombre:</strong>
-                            {{ $tableProducto->nombre }}
+                            {{ $tableExpositore->Nombre }}
+                        </div>
+                        <div class="form-group mb-2 mb20">
+                            <strong>Apellidos:</strong>
+                            {{ $tableExpositore->Apellidos }}
                         </div>
                         <div>
-                            @if (!empty($tableProducto->imagen))
-                                <img style="width: 250px;" src="{{ asset($$tableProducto->imagen) }}"
-                                    alt="Imagen de {{ $$tableProducto->nombre }}">
+                            @if (!empty($tableExpositore->foto))
+                                <img style="width: 250px;" src="{{ asset($tableExpositore->foto) }}"
+                                    alt="Imagen de  {{ $tableExpositore->Nombre }}">
                             @else
                                 <p>No hay imagen disponible.</p>
                             @endif
                         </div>
                         <div class="form-group mb-2 mb20">
-
-                            <strong>Imagen:</strong>
-                            {{ $tableProducto->imagen }}
+                            <strong>Foto:</strong>
+                            {{ $tableExpositore->foto }}
                         </div>
                         <div class="form-group mb-2 mb20">
-                            <strong>Precio:</strong>
-                            {{ $tableProducto->precio }}
+                            <strong>Correo:</strong>
+                            {{ $tableExpositore->Correo }}
                         </div>
                         <div class="form-group mb-2 mb20">
-                            <strong>Descripcion:</strong>
-                            {{ $tableProducto->descripcion }}
+                            <strong>Telefono:</strong>
+                            {{ $tableExpositore->Telefono }}
+                        </div>
+                        <div class="form-group mb-2 mb20">
+                            <strong>Facebook:</strong>
+                            {{ $tableExpositore->Facebook }}
+                        </div>
+                        <div class="form-group mb-2 mb20">
+                            <strong>Github:</strong>
+                            {{ $tableExpositore->GitHub }}
+                        </div>
+                        <div class="form-group mb-2 mb20">
+                            <strong>Instagram:</strong>
+                            {{ $tableExpositore->Instagram }}
+                        </div>
+                        <div class="form-group mb-2 mb20">
+                            <strong>X:</strong>
+                            {{ $tableExpositore->X }}
                         </div>
 
                     </div>
