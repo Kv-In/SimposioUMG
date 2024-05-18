@@ -6,11 +6,13 @@
             <input type="text" name="nombre" class="form-control @error('nombre') is-invalid @enderror" value="{{ old('nombre', $tableProducto?->nombre) }}" id="nombre" placeholder="Nombre">
             {!! $errors->first('nombre', '<div class="invalid-feedback" role="alert"><strong>:message</strong></div>') !!}
         </div>
+
         <div class="form-group mb-2 mb20">
             <label for="imagen" class="form-label">{{ __('Imagen') }}</label>
-            <input type="file" name="imagen" class="form-control @error('imagen') is-invalid @enderror" id="imagen" placeholder="Imagen">
+            <input type="file" name="imagen" accept="image/*" class="form-control @error('imagen') is-invalid @enderror" id="imagen" placeholder="Imagen">
             {!! $errors->first('imagen', '<div class="invalid-feedback" role="alert"><strong>:message</strong></div>') !!}
         </div>
+        
         <div class="form-group mb-2 mb20">
             <label for="precio" class="form-label">{{ __('Precio') }}</label>
             <input type="text" name="precio" class="form-control @error('precio') is-invalid @enderror" value="{{ old('precio', $tableProducto?->precio) }}" id="precio" placeholder="Precio">
