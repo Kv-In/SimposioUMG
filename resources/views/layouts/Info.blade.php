@@ -19,6 +19,34 @@
 
 	</head>
 
+	<style>
+		.product-item-sm {
+			 display: flex;
+			 align-items: flex-start; 
+		 }
+	 
+		 .product-item-sm .thumbnail {
+			 width: 150px; 
+			 height: 150px; 
+			 overflow: hidden; 
+			 flex-shrink: 0; /* Evita que el contenedor de la imagen se redimensione */
+		 }
+	 
+		 .product-item-sm .thumbnail img {
+			 width: 100%; /* Ajusta la imagen al ancho del contenedor */
+			 height: auto; /* Mantiene la proporción de la imagen */
+			 object-fit: cover; 
+		 }
+	 
+		 .product-item-sm .pt-3 {
+			 flex-grow: 1; /* Permite que el contenido textual crezca sin afectar la imagen */
+			 margin-left: 10px; 
+		 }
+
+		 </style>
+
+	
+
 	<body>
 
 		<!-- Start Header/Navigation -->
@@ -207,6 +235,8 @@
 		</div>
 		<!-- End Why Choose Us Section -->
 
+		
+
 		<!-- Start We Help Section -->
 		<div class="popular-product">
 			<div class="container">
@@ -216,11 +246,11 @@
 					<div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-0">
 						<div class="product-item-sm d-flex">
 							<div class="thumbnail">
-								<img src="images/product-1.png" alt="Image" class="img-fluid">
+								<img src="images/mark.png" alt="Image" class="img-fluid">
 							</div>
 							<div class="pt-3">
-								<h3>Nordic Chair</h3>
-								<p>Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio </p>
+								<h3>Mark Zuckerberg</h3>
+								<p>Uno de los fundadores de facebook </p>
 								<p><a href="#">Read More</a></p>
 							</div>
 						</div>
@@ -228,11 +258,11 @@
 					<div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-0">
 						<div class="product-item-sm d-flex">
 							<div class="thumbnail">
-								<img src="images/product-2.png" alt="Image" class="img-fluid">
+								<img src="images/musk.jpeg" alt="Image" class="img-fluid">
 							</div>
 							<div class="pt-3">
-								<h3>Kruzo Aero Chair</h3>
-								<p>Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio </p>
+								<h3>Elon Musk</h3>
+								<p>Es el fundador, consejero delegado e ingeniero jefe de SpaceX </p>
 								<p><a href="#">Read More</a></p>
 							</div>
 						</div>
@@ -240,11 +270,11 @@
 					<div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-0">
 						<div class="product-item-sm d-flex">
 							<div class="thumbnail">
-								<img src="images/product-3.png" alt="Image" class="img-fluid">
+								<img src="images/sam.jpeg" alt="Image" class="img-fluid">
 							</div>
 							<div class="pt-3">
-								<h3>Ergonomic Chair</h3>
-								<p>Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio </p>
+								<h3>Sam Altman</h3>
+								<p>Ceo de chatgpt </p>
 								<p><a href="#">Read More</a></p>
 							</div>
 						</div>
@@ -255,59 +285,12 @@
 		</div>
 		<!-- End We Help Section -->
 
-		<!-- Start Popular Product -->
-		<div class="popular-product">
-			<div class="container">
-				<h2 class="section-title mb-4 text-center p-5 ">Expositores</h2>
-				<div class="row">
-					<div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-0">
-						<div class="product-item-sm d-flex">
-							<div class="thumbnail">
-								<img src="images/product-1.png" alt="Image" class="img-fluid">
-							</div>
-							<div class="pt-3">
-								<h3>Nordic Chair</h3>
-								<p>Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio </p>
-								<p><a href="#">Read More</a></p>
-							</div>
-						</div>
-					</div>
-					<div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-0">
-						<div class="product-item-sm d-flex">
-							<div class="thumbnail">
-								<img src="images/product-2.png" alt="Image" class="img-fluid">
-							</div>
-							<div class="pt-3">
-								<h3>Kruzo Aero Chair</h3>
-								<p>Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio </p>
-								<p><a href="#">Read More</a></p>
-							</div>
-						</div>
-					</div>
-					<div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-0">
-						<div class="product-item-sm d-flex">
-							<div class="thumbnail">
-								<img src="images/product-3.png" alt="Image" class="img-fluid">
-							</div>
-							<div class="pt-3">
-								<h3>Ergonomic Chair</h3>
-								<p>Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio </p>
-								<p><a href="#">Read More</a></p>
-							</div>
-						</div>
-					</div>
-
-				</div>
-			</div>
-		</div>
-		<!-- End Popular Product -->
-
 		<!-- Start Footer Section -->
 		<footer class="footer-section">
 			<div class="container relative">
 				<div class="row g-5 mb-5">
 					<div class="col-lg-4">
-						<div class="mb-4 footer-logo-wrap"><a href="#" class="footer-logo">Simposio Umg 2024<span>.</span></a></div>
+						<div class="mb-4 footer-logo-wrap"><a href="#" class="footer-logo">Simposio Umg 2024</a></div>
 						<p class="mb-4"></p>
 						<ul class="list-unstyled custom-social">
 							<li><a href="https://www.facebook.com/SistemasUMGXelaPS?mibextid=ZbWKwL"><span class="fa fa-brands fa-facebook-f"></span></a></li>
