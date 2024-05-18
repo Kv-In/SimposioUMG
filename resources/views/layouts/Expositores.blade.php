@@ -63,7 +63,7 @@
 						<li><a class="nav-link" href="{{ url('/Souvenir') }}">Souvenir</a></li>
 						<li class="active"><a class="nav-link" href="{{ url('/Expositores') }}">Expositores</a></li>
 						<li><a class="nav-link" href="{{ url('/Organizadores') }}">Organizadores</a></li>
-						<li><a class="nav-link" href="{{ url('/Informacion') }}">Informacion</a></li>
+						
 					</ul>
 					<ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
 						<li><a class="nav-link" href="{{ url('/Login') }}"><img src="images/ic_svg_1/user.svg"></a></li>
@@ -200,37 +200,118 @@
 
 
 
+<!-- Start Testimonial Slider -->
+<div class="testimonial-section before-footer-section">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-7 mx-auto text-center">
+				<h2 class="section-title">Temas</h2>
+			</div>
+		</div>
+
+		<div class="row justify-content-center">
+			<div class="col-lg-12">
+				<div class="testimonial-slider-wrap text-center">
+
+					<div id="testimonial-nav">
+						<span class="prev" data-controls="prev"><span class="fa fa-chevron-left"></span></span>
+						<span class="next" data-controls="next"><span class="fa fa-chevron-right"></span></span>
+					</div>
+
+					<div class="testimonial-slider">
+
+						<div class="item">
+							<div class="row justify-content-center">
+								<div class="col-lg-8 mx-auto">
+
+									<div class="testimonial-block text-center">
+										<blockquote class="mb-5">
+											<p>&ldquo;<h3>Inteligencia Artificial (IA) y Aprendizaje Automático (ML)</h3>
+												Aplicaciones y casos de uso de IA en la vida cotidiana.Ética y sesgo en la IA.El impacto de la IA en el futuro del trabajo.&rdquo;</p>
+										</blockquote>
+
+										<div class="author-info">
+											<div class="author-pic">
+												<img src="images/person-1.jpg" alt="Maria Jones" class="img-fluid">
+											</div>
+											<h3 class="font-weight-bold">Maria Jones</h3>
+											<span class="position d-block mb-3">CEO, Co-Founder, XYZ Inc.</span>
+										</div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+						<!-- END item -->
+
+						<div class="item">
+							<div class="row justify-content-center">
+								<div class="col-lg-8 mx-auto">
+
+									<div class="testimonial-block text-center">
+										<blockquote class="mb-5">
+											<p>&ldquo;<h3>Computación en la nube</h3>
+												Conceptos de nube híbrida y computación de borde.Comparación entre nube pública y privada.Consideraciones de seguridad en la nube.Estrategias de migración y adopción a la nube.Perspectivas futuras de la computación en la nube.&rdquo;</p>
+										</blockquote>
+
+										<div class="author-info">
+											<div class="author-pic">
+												<img src="images/gates.webp" alt="Maria Jones" class="img-fluid">
+											</div>
+											<h3 class="font-weight-bold">Bill Gates</h3>
+											<span class="position d-block mb-3">Co-Founder, Microsoft.</span>
+										</div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+						<!-- END item -->
+
+						<div class="item">
+							<div class="row justify-content-center">
+								<div class="col-lg-8 mx-auto">
+
+									<div class="testimonial-block text-center">
+										<blockquote class="mb-5">
+											<p>&ldquo;<h3>Blockchain y tecnologías de registro distribuido (DLT)</h3>
+												Cómo funciona Blockchain y sus aplicaciones
+												Criptomonedas y el futuro de las finanzas
+												Blockchain para la cadena de suministro y la gestión de activos
+												Impacto de Blockchain en diferentes industrias.&rdquo;</p>
+										</blockquote>
+
+										<div class="author-info">
+											<div class="author-pic">
+												<img src="images/dennis.jpeg" alt="Maria Jones" class="img-fluid">
+											</div>
+											<h3 class="font-weight-bold">Dennis Ritchie</h3>
+											<span class="position d-block mb-3">creador del lenguaje de programación C y cocreador, junto con Ken Thompson, del sistema operativo Unix</span>
+										</div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+						<!-- END item -->
+
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- End Testimonial Slider -->
+
+
+
+
 
 	<!-- Start Footer Section -->
 	<footer class="footer-section">
 		<div class="container relative">
 
-			<div class="sofa-img">
-				<img src="images/umgLogo.png" alt="Image" class="img-fluid">
-			</div>
-
-			<div class="row">
-				<div class="col-lg-8">
-					<div class="subscription-form">
-						<h3 class="d-flex align-items-center"><span class="me-1"><img src="images/envelope-outline.svg" alt="Image" class="img-fluid"></span><span>Subscribe to Newsletter</span></h3>
-
-						<form action="#" class="row g-3">
-							<div class="col-auto">
-								<input type="text" class="form-control" placeholder="Enter your name">
-							</div>
-							<div class="col-auto">
-								<input type="email" class="form-control" placeholder="Enter your email">
-							</div>
-							<div class="col-auto">
-								<button class="btn btn-primary">
-									<span class="fa fa-paper-plane"></span>
-								</button>
-							</div>
-						</form>
-
-					</div>
-				</div>
-			</div>
 
 			<div class="row g-5 mb-5">
 				<div class="col-lg-4">
@@ -274,27 +355,24 @@
 				</div>
 
 			</div>
-
 			<div class="border-top copyright">
 				<div class="row pt-4">
 					<div class="col-lg-6">
-						<p class="mb-2 text-center text-lg-start">Copyright &copy;<script>document.write(new Date().getFullYear());</script>. All Rights Reserved. &mdash; Designed with love by <a href="https://untree.co">Untree.co</a> Distributed By <a hreff="https://themewagon.com">ThemeWagon</a>  <!-- License information: https://untree.co/license/ -->
-		</p>
+						<p class="mb-2 text-center text-lg-start">Copyright &copy;<script>document.write(new Date().getFullYear());</script>. All Rights Reserved. &mdash;
+						</p>
 					</div>
-
 					<div class="col-lg-6 text-center text-lg-end">
 						<ul class="list-unstyled d-inline-flex ms-auto">
 							<li class="me-4"><a href="#">Terms &amp; Conditions</a></li>
 							<li><a href="#">Privacy Policy</a></li>
 						</ul>
 					</div>
-
 				</div>
 			</div>
-
 		</div>
 	</footer>
 	<!-- End Footer Section -->
+
 
 
 	<script src="js/bootstrap.bundle.min.js"></script>

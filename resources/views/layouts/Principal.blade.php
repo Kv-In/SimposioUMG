@@ -64,7 +64,7 @@
 						<li><a class="nav-link" href="{{ url('/Souvenir') }}">Souvenir</a></li>
 						<li><a class="nav-link" href="{{ url('/Expositores') }}">Expositores</a></li>
 						<li><a class="nav-link" href="{{ url('/Organizadores') }}">Organizadores</a></li>
-						<li><a class="nav-link" href="{{ url('/Informacion') }}">Informacion</a></li>
+						
 					</ul>
 					<ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
 						<li><a class="nav-link" href="{{ url('/Login') }}"><img src="images/ic_svg_1/user.svg"></a></li>
