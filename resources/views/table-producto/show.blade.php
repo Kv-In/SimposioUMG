@@ -35,8 +35,8 @@
                         </div>
                         <div>
                             @if (!empty($tableProducto->imagen))
-                                <img style="width: 250px;" src="{{ asset($$tableProducto->imagen) }}"
-                                    alt="Imagen de {{ $$tableProducto->nombre }}">
+                                <img style="width: 250px;" src="{{ asset($tableProducto->imagen) }}"
+                                    alt="Imagen de {{ $tableProducto->nombre }}">
                             @else
                                 <p>No hay imagen disponible.</p>
                             @endif

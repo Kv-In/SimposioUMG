@@ -38,10 +38,10 @@ class TableProductoController extends Controller
     public function store(TableProductoRequest $request): RedirectResponse
     {
         $request->validate([
-            'Nombre' => 'required|string|max:255',
-            'url' => 'required|image|max:2048',
-            'Lider' => 'nullable|string|max:255',
-            'Equipo' => 'nullable|string|max:255',
+            'nombre' => 'required|string|max:255',
+            'imagen' => 'image|max:3048', // Permitir imagen opcional
+            'descripcion' => 'nullable|string',
+            'precio' => 'nullable|numeric',
         ]);
 
         $newProduct = new TableProducto();
@@ -89,8 +89,29 @@ class TableProductoController extends Controller
      */
     public function update(TableProductoRequest $request, TableProducto $tableProducto): RedirectResponse
     {
-        $tableProducto->update($request->validated());
-
+        $request->validate([
+            'nombre' => 'required|string|max:255',
+            'imagen' => 'nullable|image|max:3048', // Permitir imagen opcional
+            'descripcion' => 'nullable|string',
+            'precio' => 'nullable|numeric',
+        ]);
+    
+        // Actualizar campos existentes
+        $tableProducto->nombre = $request->nombre;
+        $tableProducto->descripcion = $request->descripcion;
+        $tableProducto->precio = $request->precio;
+    
+        // Actualizar imagen si se proporciona una nueva
+        if ($request->hasFile('imagen')) {
+            $file = $request->file('imagen');
+            $destinationPath = 'images/products/';
+            $filename = time() . $file->getClientOriginalName();
+            $uploadFile = $request->file('imagen')->move($destinationPath, $filename);
+            $tableProducto->imagen = $destinationPath . $filename;
+        }
+    
+        $tableProducto->save();
+    
         return Redirect::route('table-productos.index')
             ->with('success', 'TableProducto updated successfully');
     }

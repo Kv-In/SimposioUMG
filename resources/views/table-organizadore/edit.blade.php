@@ -25,6 +25,14 @@
                 <div class="card-body bg-white">
                     <form method="POST" action="{{ route('table-organizadores.update', $tableOrganizadore->id) }}"  role="form" enctype="multipart/form-data">
                         {{ method_field('PATCH') }}
+                        <div>
+                            @if (!empty($tableOrganizadore->url))
+                                <img style="width: 100px;" src="{{ asset($tableOrganizadore->url) }}"
+                                    alt="Imagen de {{ $tableOrganizadore->Nombre }}">
+                            @else
+                                <p>No hay imagen disponible.</p>
+                            @endif
+                        </div>
                         @csrf
 
                         @include('table-organizadore.form')

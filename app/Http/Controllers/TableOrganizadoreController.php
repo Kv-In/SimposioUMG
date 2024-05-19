@@ -39,7 +39,7 @@ class TableOrganizadoreController extends Controller
     {
         $request->validate([
             'Nombre' => 'required|string|max:255',
-            'url' => 'required|image|max:2048',
+            'url' => 'required|image|max:3048',
             'Lider' => 'nullable|string|max:255',
             'Equipo' => 'nullable|string|max:255',
         ]);
@@ -88,10 +88,31 @@ class TableOrganizadoreController extends Controller
      */
     public function update(TableOrganizadoreRequest $request, TableOrganizadore $tableOrganizadore): RedirectResponse
     {
-        $tableOrganizadore->update($request->validated());
+        $request->validate([
+            'Nombre' => 'required|string|max:255',
+            'url' => 'nullable|image|max:3048',
+            'Lider' => 'nullable|string|max:255',
+            'Equipo' => 'nullable|string|max:255',
+        ]);
+        
+        $tableOrganizadore->Nombre = $request->Nombre;
+        $tableOrganizadore->Lider = $request->Lider;
+        $tableOrganizadore->Equipo = $request->Equipo;
+        
+
+        if ($request->hasFile('url')) {
+            $file = $request->file('url');
+            $destinationPath = 'images/Organizadores/';
+            $filename = time() . $file->getClientOriginalName();
+            $uploadFile = $request->file('url')->move($destinationPath, $filename);
+            $tableOrganizadore->url = $destinationPath . $filename;
+        }
+
+        
+        $tableOrganizadore->save();
 
         return Redirect::route('table-organizadores.index')
-            ->with('success', 'TableOrganizadore updated successfully');
+            ->with('success', 'TableOrganizadore updated successfully.');
     }
 
     public function destroy($id): RedirectResponse

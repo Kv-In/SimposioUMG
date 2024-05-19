@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 
 
-Route::get('/', [App\Http\Controllers\viewprodController::class, 'index']);
+Route::get('/', [App\Http\Controllers\viewconvinacionController::class, 'showData']);
 
 Route::get('/Souvenir', [App\Http\Controllers\viewprodController::class, 'indexSouv']);
 

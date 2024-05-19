@@ -25,6 +25,14 @@
                 <div class="card-body bg-white">
                     <form method="POST" action="{{ route('table-expositores.update', $tableExpositore->id) }}"  role="form" enctype="multipart/form-data">
                         {{ method_field('PATCH') }}
+                        <div>
+                            @if (!empty($tableExpositore->foto))
+                                <img style="width: 100px;" src="{{ asset($tableExpositore->foto) }}"
+                                    alt="Imagen de  {{ $tableExpositore->Nombre }}">
+                            @else
+                                <p>No hay imagen disponible.</p>
+                            @endif
+                        </div>
                         @csrf
 
                         @include('table-expositore.form')

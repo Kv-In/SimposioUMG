@@ -25,6 +25,14 @@
                 <div class="card-body bg-white">
                     <form method="POST" action="{{ route('table-productos.update', $tableProducto->id) }}"  role="form" enctype="multipart/form-data">
                         {{ method_field('PATCH') }}
+                        <div>
+                            @if (!empty($tableProducto->imagen))
+                                <img style="width: 100px;" src="{{ asset($tableProducto->imagen) }}"
+                                    alt="Imagen de {{ $tableProducto->nombre }}">
+                            @else
+                                <p>No hay imagen disponible.</p>
+                            @endif
+                        </div>
                         @csrf
 
                         @include('table-producto.form')

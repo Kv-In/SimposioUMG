@@ -101,10 +101,43 @@ class TableExpositoreController extends Controller
      */
     public function update(TableExpositoreRequest $request, TableExpositore $tableExpositore): RedirectResponse
     {
-        $tableExpositore->update($request->validated());
+        $request->validate([
+            'Nombre' => 'required|string|max:255',
+            'Apellidos' => 'required|string|max:255',
+            'foto' => 'required|image|max:2048',
+            'Correo' => 'required|string|max:255',
+            'Telefono' => 'nullable|string|max:255',
+            'Facebook' => 'nullable|string|max:255',
+            'GitHub' => 'nullable|string|max:255',
+            'Instagram' => 'nullable|string|max:255',
+            'X' => 'nullable|string|max:255',
+        ]);
+
+        $tableExpositore->Nombre = $request->Nombre;
+        $tableExpositore->Apellidos = $request->Apellidos;
+        $tableExpositore->Correo = $request->Correo;
+        $tableExpositore->Telefono = $request->Telefono;
+        $tableExpositore->Facebook = $request->Facebook;
+        $tableExpositore->GitHub = $request->GitHub;
+        $tableExpositore->Instagram = $request->Instagram;
+        $tableExpositore->X = $request->X;
+
+        
+
+        if ($request->hasFile('foto')) {
+            $file = $request->file('foto');
+            $destinationPath = 'images/Expositores/';
+            $filename = time() . $file->getClientOriginalName();
+            $uploadFile = $request->file('foto')->move($destinationPath, $filename);
+            $tableExpositore->foto = $destinationPath . $filename;
+        }
+
+        
+        
+        $tableExpositore->save();
 
         return Redirect::route('table-expositores.index')
-            ->with('success', 'TableExpositore updated successfully');
+            ->with('success', 'TableExpositore updated successfully.');
     }
 
     public function destroy($id): RedirectResponse
