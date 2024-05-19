@@ -98,8 +98,7 @@ class TableOrganizadoreController extends Controller
         $tableOrganizadore->Nombre = $request->Nombre;
         $tableOrganizadore->Lider = $request->Lider;
         $tableOrganizadore->Equipo = $request->Equipo;
-        
-
+    
         if ($request->hasFile('url')) {
             $file = $request->file('url');
             $destinationPath = 'images/Organizadores/';
@@ -107,10 +106,9 @@ class TableOrganizadoreController extends Controller
             $uploadFile = $request->file('url')->move($destinationPath, $filename);
             $tableOrganizadore->url = $destinationPath . $filename;
         }
-
-        
+    
         $tableOrganizadore->save();
-
+    
         return Redirect::route('table-organizadores.index')
             ->with('success', 'TableOrganizadore updated successfully.');
     }

@@ -24,7 +24,7 @@ class TableExpositoreRequest extends FormRequest
         return [
 			'Nombre' => 'required|string',
 			'Apellidos' => 'required|string',
-			'foto' => 'file|required',
+			'foto' => 'file|nullable',
 			'Correo' => 'required|string',
 			'Telefono' => 'nullable|string',
 			'Facebook' => 'nullable|string',

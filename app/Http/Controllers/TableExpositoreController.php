@@ -104,7 +104,7 @@ class TableExpositoreController extends Controller
         $request->validate([
             'Nombre' => 'required|string|max:255',
             'Apellidos' => 'required|string|max:255',
-            'foto' => 'required|image|max:2048',
+            'foto' => 'nullable|image|max:2048',
             'Correo' => 'required|string|max:255',
             'Telefono' => 'nullable|string|max:255',
             'Facebook' => 'nullable|string|max:255',

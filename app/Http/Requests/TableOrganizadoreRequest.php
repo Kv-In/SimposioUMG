@@ -23,7 +23,7 @@ class TableOrganizadoreRequest extends FormRequest
     {
         return [
 			'Nombre' => 'required|string',
-			'url' => 'file|required',
+			'url' => 'file|nullable',
 			'Lider' => 'nullable|string',
 			'Equipo' => 'nullable|string',
         ];
