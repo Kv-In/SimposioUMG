@@ -12,26 +12,31 @@ class UserSeeder extends Seeder
     /**
      * Run the database seeds.
      */
-    public function run()
+   
+        public function run()
     {
         // Llama al RoleSeeder para asegurarse de que los roles y permisos están creados
         $this->call(RoleSeeder::class);
 
         // Crear el usuario admin
-        $adminUser = User::create([
+        $adminUser1 = User::create([
             'name' => 'Kevin Yovani',
             'email' => 'yovaniadmin@gmail.com',
             'password' => bcrypt('Rootyovani')
         ]);
 
-        $adminUser = User::create([
+        // Asignar el rol de Admin al primer usuario creado
+        $adminUser1->assignRole('Admin');
+
+        // Crear otro usuario admin
+        $adminUser2 = User::create([
             'name' => 'Admin',
             'email' => 'Foxadmin@gmail.com',
             'password' => bcrypt('RootAdmin1')
         ]);
 
-        // Asignar el rol de Admin al usuario creado
-        $adminUser->assignRole('Admin');
+        // Asignar el rol de Admin al segundo usuario creado
+        $adminUser2->assignRole('Admin');
 
         // Crear un usuario adicional usando la fábrica
         User::factory(1)->create();

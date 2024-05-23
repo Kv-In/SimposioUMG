@@ -13,10 +13,9 @@ Route::get('/Souvenir', [App\Http\Controllers\viewprodController::class, 'indexP
 Route::resource('/table-productos', TableProductoController::class);
 Route::resource('/table-organizadores', TableOrganizadoreController::class);
 Route::resource('/table-expositores', TableExpositoreController::class);
+Route::resource('roles', RolesController::class)->middleware('can:admin.home')->middleware('can:admin.home');
 
-Route::resource('roles', RolesController::class)->middleware('can:admin.home');
-
-Route::resource('user', UserController::class)->only(['index','edit','update']);
+Route::resource('user', UserController::class)->only(['index','edit','update'])->middleware('can:admin.home');
 
 
 
