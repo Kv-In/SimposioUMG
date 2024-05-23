@@ -11,6 +11,14 @@ use Illuminate\View\View;
 
 class TableExpositoreController extends Controller
 {
+    /**bloquea los link para los que no tienen el rol de admin o un rol de editor */
+    public function __construct(){
+        $this->middleware('can::table-expositores.index')->only('index');
+        $this->middleware('can::table-expositores.create')->only('create','store');
+        $this->middleware('can::table-expositores.edit')->only('edi','update');
+        $this->middleware('can::table-expositores.show')->only('show');
+        $this->middleware('can::table-expositores.destroy')->only('destroy');
+    }
     /**
      * Display a listing of the resource.
      */

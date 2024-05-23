@@ -1,46 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('adminlte::page')
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Crud Expositores</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="css/stylecrud.css">
-    <style>
-        .text-truncate {
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-        }
-    </style>
-</head>
+@section('title', 'Dashboard')
 
-<body>
-    <h1 class="text-center text-secondary font-weight-bold p-5">Expositores</h1>
+@section('content_header')
+    <h1>Crud Expositores</h1>
+@stop
 
-    <div class="container-fluid">
-        <div class="table-responsive">
+@section('content')
+    <div class="card">
+        <div class="body table-responsive-custom">
             <div class="table-wrapper">
                 <div class="table-title">
                     <div class="row">
                         <div class="col-xs-6">
-                            <h2>Expositores <b>Simposio</b></h2>
-                        </div>
-                        <div class="col-xs-6 text-right">
-                            <a href="{{ route('table-expositores.create') }}" class="btn btn-success" data-toggle="modal">
-                                <i class="material-icons">&#xE147;</i> <span>Añadir Registro</span>
-                            </a>
+                            <h2>CRUD <b>Expositores</b></h2>
                         </div>
                     </div>
                 </div>
-                <table class="table table-striped table-hover">
+
+                <table class="table table-striped table-hover table-custom">
                     <thead>
                         <tr>
                             <th>id</th>
@@ -60,15 +38,15 @@
                         @foreach ($tableExpositores as $tableExpositore)
                         <tr>
                             <td>{{++$i}}</td>
-                            <td class="text-truncate" style="max-width: 150px;">{{ $tableExpositore->Nombre }}</td>
-                            <td class="text-truncate" style="max-width: 150px;">{{ $tableExpositore->Apellidos }}</td>
+                            <td class="text-truncate" style="max-width: 75px;">{{ $tableExpositore->Nombre }}</td>
+                            <td class="text-truncate" style="max-width: 75px;">{{ $tableExpositore->Apellidos }}</td>
                             <td><img style="width: 100px;" src="{{ $tableExpositore->foto }}" alt=""></td>
-                            <td class="text-truncate" style="max-width: 200px;">{{ $tableExpositore->Correo }}</td>
-                            <td class="text-truncate" style="max-width: 150px;">{{ $tableExpositore->Telefono }}</td>
-                            <td class="text-truncate" style="max-width: 150px;">{{ $tableExpositore->Facebook }}</td>
-                            <td class="text-truncate" style="max-width: 150px;">{{ $tableExpositore->GitHub }}</td>
-                            <td class="text-truncate" style="max-width: 150px;">{{ $tableExpositore->Instagram }}</td>
-                            <td class="text-truncate" style="max-width: 150px;">{{ $tableExpositore->X }}</td>
+                            <td class="text-truncate" style="max-width: 75px;">{{ $tableExpositore->Correo }}</td>
+                            <td class="text-truncate" style="max-width: 75px;">{{ $tableExpositore->Telefono }}</td>
+                            <td class="text-truncate" style="max-width: 75px;">{{ $tableExpositore->Facebook }}</td>
+                            <td class="text-truncate" style="max-width: 75px;">{{ $tableExpositore->GitHub }}</td>
+                            <td class="text-truncate" style="max-width: 75px;">{{ $tableExpositore->Instagram }}</td>
+                            <td class="text-truncate" style="max-width: 75px;">{{ $tableExpositore->X }}</td>
                             <td>
                                 <form action="{{ route('table-expositores.destroy', $tableExpositore->id) }}" method="POST">
                                     <a class="btn btn-outline-primary" href="{{ route('table-expositores.show', $tableExpositore->id) }}">
@@ -88,41 +66,61 @@
                         @endforeach
                     </tbody>
                 </table>
-            </div>
-        </div>
-    </div>
 
-    <!-- Delete Modal HTML -->
-    <div id="deleteEmployeeModal" class="modal fade">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <form id="confirmDeleteForm" method="POST">
-                    @csrf
-                    @method('DELETE')
-                    <div class="modal-header">
-                        <h4 class="modal-title">Eliminar Registro</h4>
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                @isset($tableExpositores)
+                    <!-- Delete Modal HTML -->
+                    <div id="deleteEmployeeModal" class="modal fade">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                
+                                <div class="modal-header">
+                                    <h4 class="modal-title">Eliminar Registro</h4>
+                                    <button type="button" class="close" data-dismiss="modal" 
+                                    aria-hidden="true">&times;</button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>¿Estás seguro de que deseas eliminar este registro?</p>
+                                    <p class="text-warning"><small>Esta acción no se puede deshacer.</small></p>
+                                </div>
+                                <div class="modal-footer">
+                                    <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancelar">
+                                    <button type="button" class="btn btn-danger" id="confirmDeleteButton">Eliminar</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="modal-body">
-                        <p>¿Estás seguro de que deseas eliminar este registro?</p>
-                        <p class="text-warning"><small>Esta acción no se puede deshacer.</small></p>
-                    </div>
-                    <div class="modal-footer">
-                        <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancelar">
-                        <button type="submit" class="btn btn-danger">Eliminar</button>
-                    </div>
-                </form>
+                @endisset
+
             </div>
         </div>
     </div>
 
     <script>
+        let formToSubmit;
+
         function abrirModalConfirmacion(id) {
-            const form = document.getElementById('confirmDeleteForm');
-            form.action = `/table-expositores/${id}`;
+            // Almacena el formulario que debe enviarse después de la confirmación
+            formToSubmit = document.querySelector(`form[action$="${id}"]`);
+            // Abrir el modal de confirmación
             $('#deleteEmployeeModal').modal('show');
         }
-    </script>
-</body>
 
-</html>
+        document.getElementById('confirmDeleteButton').addEventListener('click', function () {
+            // Envía el formulario almacenado
+            formToSubmit.submit();
+        });
+    </script>
+@stop
+
+@section('css')
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/stylecrud.css">
+@stop
+
+@section('js')
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+@stop

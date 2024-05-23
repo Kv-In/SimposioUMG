@@ -14,6 +14,7 @@
 		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 		<link href="css/tiny-slider.css" rel="stylesheet">
 		<link href="css/style.css" rel="stylesheet">
+		<script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
 		<title>Simposio 2024 </title>
 	</head>
 
@@ -66,8 +67,37 @@
 						
 					</ul>
 					<ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
-						<li><a class="nav-link" href="{{ url('/Login') }}"><img src="images/ic_svg_1/user.svg"></a></li>
-						<li><a class="nav-link" href="{{ url('/Carito') }}"><img src="images/ic_svg_1/cart.svg"></a></li>
+						@auth
+							<!-- Profile dropdown -->
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle d-flex align-items-center hidden-arrow" href="#"
+									id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+									<img src="https://mdbootstrap.com/img/Photos/Avatars/img (31).jpg" class="rounded-circle"
+										height="30" alt="" loading="lazy" />
+								</a>
+								<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+									<li><a class="dropdown-item" href="#">My profile</a></li>
+									<li><a class="dropdown-item" href="{{ url('/dashboard') }}">Dashboard</a></li>
+									<li>
+										<form method="POST" action="{{ route('logout') }}" id="logout-form">
+											@csrf
+											<a class="dropdown-item" href="#"
+												onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+												Cerrar Sesion
+											</a>
+										</form>
+	
+	
+									</li>
+								</ul>
+							</li>
+							<li class="nav-item"><a class="nav-link" href="{{ url('/Carrito') }}"><img
+								src="images/ic_svg_1/cart.svg" alt="Cart"></a></li>
+						@else
+							<li class="nav-item"><a class="nav-link" href="{{ url('/Login') }}"><img
+										src="images/ic_svg_1/user.svg" alt="Login"></a></li>
+							
+						@endauth
 					</ul>
 				</div>
 			</div>
@@ -374,7 +404,7 @@
 	<!-- End Footer Section -->
 
 
-
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 	<script src="js/bootstrap.bundle.min.js"></script>
 	<script src="js/tiny-slider.js"></script>
 	<script src="js/custom.js"></script>

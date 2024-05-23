@@ -15,6 +15,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link href="css/tiny-slider.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/Producto.css" rel="stylesheet">
     <title>Simposio 2024</title>
 </head>
 
@@ -79,7 +80,7 @@
                 <!-- Start Column 2 -->
                 <div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
                     <div class="products-item">
-                        @foreach ($products as $tableProducto)
+                        @foreach ($tableProductos as $tableProducto)
                             <div class="product-item" key="{{$tableProducto->id}}">
                                 <img src="{{ $tableProducto->imagen }}" class="img-fluid product-thumbnail">
                                 <h3 class="product-title">{{ $tableProducto->nombre }}</h3>

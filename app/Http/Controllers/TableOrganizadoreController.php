@@ -11,6 +11,13 @@ use Illuminate\View\View;
 
 class TableOrganizadoreController extends Controller
 {
+    public function __construct(){
+        $this->middleware('can::table-organizadores.index')->only('index');
+        $this->middleware('can::table-organizadores.create')->only('create','store');
+        $this->middleware('can::table-organizadores.edit')->only('edi','update');
+        $this->middleware('can::table-organizadores.show')->only('show');
+        $this->middleware('can::table-organizadores.destroy')->only('destroy');
+    }
     /**
      * Display a listing of the resource.
      */

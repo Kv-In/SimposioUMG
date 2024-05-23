@@ -1,26 +1,30 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TableProductoController;
+use App\Http\Controllers\TableOrganizadoreController;
+use App\Http\Controllers\TableExpositoreController;
+use App\Http\Controllers\RolesController;
+use App\Http\Controllers\UserController;
 
 
+Route::get('/', [App\Http\Controllers\viewconvinacionController::class, 'showData'])->name('home');
+Route::get('/Souvenir', [App\Http\Controllers\viewprodController::class, 'indexProducto']);
 
-Route::get('/', [App\Http\Controllers\viewconvinacionController::class, 'showData']);
+Route::resource('/table-productos', TableProductoController::class);
+Route::resource('/table-organizadores', TableOrganizadoreController::class);
+Route::resource('/table-expositores', TableExpositoreController::class);
 
-Route::get('/Souvenir', [App\Http\Controllers\viewprodController::class, 'indexSouv']);
+Route::resource('roles', RolesController::class)->middleware('can:admin.home');
 
-Route::resource('/table-productos', App\Http\Controllers\TableProductoController::class);
-Route::resource('/table-organizadores', App\Http\Controllers\TableOrganizadoreController::class);
-Route::resource('/table-expositores', App\Http\Controllers\TableExpositoreController::class);
+Route::resource('user', UserController::class)->only(['index','edit','update']);
+
+
 
 Route::get('/Expositores', function () {
     /**en el return defino la ruta donde esta el  */
     return view('layouts/Expositores');
 });
 
-Route::get('/Informacion', function () {
-    /**en el return defino la ruta donde esta el  */
-    return view('layouts/Info');
-});
 
 Route::get('/Organizadores', function () {
     /**en el return defino la ruta donde esta el  */
@@ -48,11 +52,16 @@ Route::get('/Registro', function () {
     return view('auth/register');
 });
 
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth', ])->name('dashboard');
 
 
-Auth::routes();
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+});
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-
+require __DIR__.'/auth.php';
 
