@@ -56,7 +56,7 @@
                                 <li><a class="dropdown-item" href="#">My profile</a></li>
                                 <li><a class="dropdown-item" href="{{ url('/dashboard') }}">Dashboard</a></li>
                                 <li>
-                                    <form method="POST" action="{{ route('logout') }}" id="logout-form">
+                                    <form method="POST" action="{{ url ('logout') }}" id="logout-form">
                                         @csrf
                                         <a class="dropdown-item" href="#"
                                             onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
@@ -71,7 +71,7 @@
                         <li class="nav-item"><a class="nav-link" href="{{ url('/Carito') }}"><img
                                     src="images/ic_svg_1/cart.svg" alt="Cart"></a></li>
                     @else
-                        <li class="nav-item"><a class="nav-link" href="{{ route('/Login') }}"><img
+                        <li class="nav-item"><a class="nav-link" href="{{ url ('/Login') }}"><img
                                     src="images/ic_svg_1/user.svg" alt="Login"></a></li>
 
                     @endauth
