@@ -119,7 +119,6 @@
                         <p class="mb-4">There are two types of people who will tell you that you cannot make a
                             difference in this world: those who are afraid to try and those who are afraid you will
                             succeed.</p>
-                        <p><a href="#" class="btn btn-white-outline">Explore</a></p>
                     </div>
                 </div>
                 <div class="col-lg-7">
@@ -191,44 +190,6 @@
     </div>
     <!-- End Why Choose Us Section -->
 
-    <!-- Start We Help Section -->
-    <div class="popular-product">
-        <div class="container">
-            <h2 class="section-title mb-4 text-center p-5 ">Expositores</h2>
-
-            <div class="row">
-                <div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-0">
-                    
-                </div>
-                <div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-0">
-                    <div class="product-item-sm d-flex">
-                        <div class="thumbnail">
-                            <img src="images/musk.jpeg" alt="Image" class="img-fluid">
-                        </div>
-                        <div class="pt-3">
-                            <h3>Elon Musk</h3>
-                            <p>Es el fundador, consejero delegado e ingeniero jefe de SpaceX </p>
-                            <p><a href="#">Read More</a></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-0">
-                    <div class="product-item-sm d-flex">
-                        <div class="thumbnail">
-                            <img src="images/sam.jpeg" alt="Image" class="img-fluid">
-                        </div>
-                        <div class="pt-3">
-                            <h3>Sam Altman</h3>
-                            <p>Ceo de chatgpt </p>
-                            <p><a href="#">Read More</a></p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-    <!-- End We Help Section -->
 
 
 
