@@ -92,8 +92,6 @@
                         <p class="mb-4">There are two types of people who will tell you that you cannot make a
                             difference in this world: those who are afraid to try and those who are afraid you will
                             succeed.</p>
-                        <p><a href="" class="btn btn-secondary me-2">Shop Now</a><a href="#"
-                                class="btn btn-white-outline">Explore</a></p>
                     </div>
                 </div>
                 <div class="col-lg-7">
