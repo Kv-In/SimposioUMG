@@ -96,7 +96,7 @@
                                 </li>
                             </ul>
                         </li>
-						<li class="nav-item"><a class="nav-link" href="{{ url('/Carrito') }}"><img
+						<li class="nav-item"><a class="nav-link" href="{{ url('/Carito') }}"><img
 							src="images/ic_svg_1/cart.svg" alt="Cart"></a></li>
                     @else
                         <li class="nav-item"><a class="nav-link" href="{{ url('/Login') }}"><img

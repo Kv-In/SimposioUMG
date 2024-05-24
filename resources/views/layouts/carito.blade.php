@@ -41,8 +41,37 @@
 						<li><a class="nav-link" href="{{ url('/Organizadores') }}">Organizadores</a></li>
 					</ul>
 					<ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
-						<li><a class="nav-link" href="{{ url('/Login') }}"><img src="images/ic_svg_1/user.svg"></a></li>
-						<li class="active"><a class="nav-link" href="{{ url('/Carito') }}"><img src="images/ic_svg_1/cart.svg"></a></li>
+						@auth
+							<!-- Profile dropdown -->
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle d-flex align-items-center hidden-arrow" href="#"
+									id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+									<img src="https://mdbootstrap.com/img/Photos/Avatars/img (31).jpg" class="rounded-circle"
+										height="30" alt="" loading="lazy" />
+								</a>
+								<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+									<li><a class="dropdown-item" href="#">My profile</a></li>
+									<li><a class="dropdown-item" href="{{ url('/dashboard') }}">Dashboard</a></li>
+									<li>
+										<form method="POST" action="{{ route('logout') }}" id="logout-form">
+											@csrf
+											<a class="dropdown-item" href="#"
+												onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+												Cerrar Sesion
+											</a>
+										</form>
+	
+	
+									</li>
+								</ul>
+							</li>
+							<li class="nav-item"><a class="nav-link" href="{{ url('/Carito') }}"><img
+								src="images/ic_svg_1/cart.svg" alt="Cart"></a></li>
+						@else
+							<li class="nav-item"><a class="nav-link" href="{{ url('/Login') }}"><img
+										src="images/ic_svg_1/user.svg" alt="Login"></a></li>
+							
+						@endauth
 					</ul>
 				</div>
 			</div>
@@ -130,74 +159,40 @@
 
 
 		<!-- Start Footer Section -->
-	<footer class="footer-section">
-		<div class="container relative">
-
-
-			<div class="row g-5 mb-5">
-				<div class="col-lg-4">
-					<div class="mb-4 footer-logo-wrap"><a href="#" class="footer-logo">¿Que es un simposio?<span></span></a></div>
-					<p class="mb-4">El simposio es la mejor forma de reunir a expertos y sacar provecho de los saberes de cada uno con relación a un tema.</p>
-
-					<ul class="list-unstyled custom-social">
-						<li><a href="#"><span class="fa fa-brands fa-facebook-f"></span></a></li>
-						<li><a href="#"><span class="fa fa-brands fa-twitter"></span></a></li>
-						<li><a href="#"><span class="fa fa-brands fa-instagram"></span></a></li>
-						<li><a href="#"><span class="fa fa-brands fa-linkedin"></span></a></li>
-					</ul>
+		<footer class="footer-section">
+			<div class="container relative">
+				<div class="row g-5 mb-5">
+					<div class="col-lg-4">
+						<div class="mb-4 footer-logo-wrap"><a href="#" class="footer-logo">Simposio Umg
+								2024<span>.</span></a></div>
+						<p class="mb-4"></p>
+						<ul class="list-unstyled custom-social">
+							<li><a href="https://www.facebook.com/SistemasUMGXelaPS?mibextid=ZbWKwL"><span
+										class="fa fa-brands fa-facebook-f"></span></a></li>
+							<li><a href="#"><span class="fa fa-brands fa-twitter"></span></a></li>
+							<li><a href="#"><span class="fa fa-brands fa-instagram"></span></a></li>
+						</ul>
+					</div>
 				</div>
-
-				<div class="col-lg-8">
-					<div class="row links-wrap">
-						<div class="col-6 col-sm-6 col-md-3">
-							<ul class="list-unstyled">
-								<li><a href="#">About us</a></li>
-								<li><a href="#">Blog</a></li>
-								<li><a href="#">Contact us</a></li>
-							</ul>
+				<div class="border-top copyright">
+					<div class="row pt-4">
+						<div class="col-lg-6">
+							<p class="mb-2 text-center text-lg-start">Copyright &copy;
+								<script>
+									document.write(new Date().getFullYear());
+								</script>. All Rights Reserved. &mdash;
+							</p>
 						</div>
-
-						<div class="col-6 col-sm-6 col-md-3">
-							<ul class="list-unstyled">
-								<li><a href="#">Support</a></li>
-								<li><a href="#">Live chat</a></li>
-							</ul>
-						</div>
-
-						<div class="col-6 col-sm-6 col-md-3">
-							<ul class="list-unstyled">
-								<li><a href="#">Our team</a></li>
-								<li><a href="#">Leadership</a></li>
+						<div class="col-lg-6 text-center text-lg-end">
+							<ul class="list-unstyled d-inline-flex ms-auto">
+								<li class="me-4"><a href="#">Terms &amp; Conditions</a></li>
 								<li><a href="#">Privacy Policy</a></li>
 							</ul>
 						</div>
-
 					</div>
 				</div>
-
 			</div>
-
-			<div class="row pt-4">
-				<div class="col-lg-6">
-					<p class="mb-2 text-center text-lg-start">Copyright &copy;
-						<script>
-							document.write(new Date().getFullYear());
-						</script>. All Rights Reserved. &mdash;
-					</p>
-				</div>
-
-				<div class="col-lg-6 text-center text-lg-end">
-					<ul class="list-unstyled d-inline-flex ms-auto">
-						<li class="me-4"><a href="#">Terms &amp; Conditions</a></li>
-						<li><a href="#">Privacy Policy</a></li>
-					</ul>
-				</div>
-
-			</div>
-		</div>
-
-	</div>
-</footer>
+		</footer>
 <!-- End Footer Section -->
 
 		<script src="js/bootstrap.bundle.min.js"></script>

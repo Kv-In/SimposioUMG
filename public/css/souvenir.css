@@ -1,0 +1,156 @@
+/* General Styles */
+.untree_co-section {
+    padding: 60px 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+/* Product Item Styles */
+.products-item {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.product-item {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+}
+
+.product-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.product-thumbnail {
+    width: 200px;
+    height: 200px; /* Ajusta la altura según sea necesario */
+    object-fit: cover;
+    border-bottom: 1px solid #eee;
+}
+
+.product-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin: 15px 0 10px 0;
+    color: #333;
+}
+
+.product-description {
+    font-size: 1rem;
+    color: #666;
+    margin: 0 15px 15px;
+    flex-grow: 1;
+}
+
+.product-price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #6c0535;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #0c0c0c;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.icon-cross img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Modal Styles */
+.portfolio-modal .modal-dialog {
+    max-width: 800px;
+    margin: 1.75rem auto;
+}
+
+.portfolio-modal .modal-content {
+    border: none;
+    border-radius: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio-modal .modal-header {
+    border-bottom: none;
+    padding: 1rem;
+}
+
+.portfolio-modal .modal-body {
+    padding: 2rem;
+}
+
+.portfolio-modal .portfolio-modal-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.portfolio-modal .divider-custom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.portfolio-modal .divider-custom-line {
+    width: 50px;
+    height: 4px;
+    background-color: #007bff;
+    margin: 0 10px;
+}
+
+.portfolio-modal .divider-custom-icon {
+    font-size: 1.5rem;
+    color: #007bff;
+}
+
+.portfolio-modal .img-fluid {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1.5rem;
+}
+
+.portfolio-modal .btn-primary {
+    background-color: #191c1f;
+    border: none;
+    padding: 10px 20px;
+    color: #fff;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.portfolio-modal .btn-primary:hover {
+    background-color: #444649;
+}
