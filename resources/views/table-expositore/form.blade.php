@@ -42,8 +42,8 @@
             {!! $errors->first('Instagram', '<div class="invalid-feedback" role="alert"><strong>:message</strong></div>') !!}
         </div>
         <div class="form-group mb-2 mb20">
-            <label for="x" class="form-label">{{ __('X') }}</label>
-            <input type="text" name="X" class="form-control @error('X') is-invalid @enderror" value="{{ old('X', $tableExpositore?->X) }}" id="x" placeholder="X">
+            <label for="x" class="form-label">{{ __('Descripcion') }}</label>
+            <input type="text" name="X" class="form-control @error('X') is-invalid @enderror" value="{{ old('X', $tableExpositore?->X) }}" id="x" placeholder="Descripcion">
             {!! $errors->first('X', '<div class="invalid-feedback" role="alert"><strong>:message</strong></div>') !!}
         </div>
 

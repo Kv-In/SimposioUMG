@@ -243,31 +243,10 @@
 
             <div class="row">
                 @yield('contEx1')
-                <div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-0">
-                    <div class="product-item-sm d-flex">
-                        <div class="thumbnail">
-                            <img src="images/musk.jpeg" alt="Image" class="img-fluid">
-                        </div>
-                        <div class="pt-3">
-                            <h3>Elon Musk</h3>
-                            <p>Es el fundador, consejero delegado e ingeniero jefe de SpaceX </p>
-                            <p><a href="#">Read More</a></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-0">
-                    <div class="product-item-sm d-flex">
-                        <div class="thumbnail">
-                            <img src="images/sam.jpeg" alt="Image" class="img-fluid">
-                        </div>
-                        <div class="pt-3">
-                            <h3>Sam Altman</h3>
-                            <p>Ceo de chatgpt </p>
-                            <p><a href="#">Read More</a></p>
-                        </div>
-                    </div>
-                </div>
-
+                @yield('contEx2')
+                @yield('contEx3')
+                
+                <p class="mt-4"><a href="{{ url('/Expositores') }}" class="btn">Explore...</a></p>
             </div>
         </div>
     </div>

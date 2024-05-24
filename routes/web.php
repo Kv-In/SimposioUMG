@@ -5,24 +5,23 @@ use App\Http\Controllers\TableOrganizadoreController;
 use App\Http\Controllers\TableExpositoreController;
 use App\Http\Controllers\RolesController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\ProfileController;
+use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', [App\Http\Controllers\viewconvinacionController::class, 'showData'])->name('home');
 Route::get('/Souvenir', [App\Http\Controllers\viewprodController::class, 'indexProducto']);
 
-Route::resource('/table-productos', TableProductoController::class);
-Route::resource('/table-organizadores', TableOrganizadoreController::class);
-Route::resource('/table-expositores', TableExpositoreController::class);
+Route::resource('/table-productos', TableProductoController::class)->middleware('can:admin.home');
+Route::resource('/table-organizadores', TableOrganizadoreController::class)->middleware('can:admin.home');
+Route::resource('/table-expositores', TableExpositoreController::class)->middleware('can:admin.home');
 Route::resource('roles', RolesController::class)->middleware('can:admin.home')->middleware('can:admin.home');
 
 Route::resource('user', UserController::class)->only(['index','edit','update'])->middleware('can:admin.home');
 
 
+Route::get('/Expositores', [App\Http\Controllers\viewExpoController::class, 'indexExpo']);
 
-Route::get('/Expositores', function () {
-    /**en el return defino la ruta donde esta el  */
-    return view('layouts/Expositores');
-});
 
 
 Route::get('/Organizadores', function () {

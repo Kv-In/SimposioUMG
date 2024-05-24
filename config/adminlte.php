@@ -396,19 +396,19 @@ return [
         [
             'text' => 'blog',
             'url' => 'admin/blog',
-            'can' => 'manage-blog',
+            'can' => 'Admin.home',
         ],
         [
             'text' => 'Roles ',
-            'url' => 'roles',
+            'route' => 'roles',
             'icon' => 'fas fa-users-cog fa-fw',
             'can' => 'admin.home',
             
         ],
-        ['header' => 'account_settings'],
+        ['header' => 'Configuraciones de la cuenta'],
         [
-            'text' => 'profile',
-            'url' => 'admin/settings',
+            'text' => 'Perfil',
+            'url' => 'profile.edit',
             'icon' => 'fas fa-fw fa-user',
         ],
         [

@@ -18,7 +18,6 @@
         </a>
     </div>
 @endsection
-
 @section('cont2')
     <div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
         <a class="product-item" href="{{ url('/Carito') }}">
@@ -34,7 +33,6 @@
         </a>
     </div>
 @endsection
-
 @section('cont3')
     <div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
         <a class="product-item" href="{{ url('/Carito') }}">
@@ -52,21 +50,51 @@
 @endsection
 
 
-@section('contEx1') 
-
-<div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-0">
-    <div class="product-item-sm d-flex">
-        @foreach ($tableExpositoresCont1 as $tableProducto)
-        <div class="thumbnail">
-            <img src="{{ $tableExpositore->foto }}" alt="Image" class="img-fluid">
+@section('contEx1')
+    <div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-0">
+        <div class="product-item-sm d-flex">
+            @foreach ($tableExpositoresCont1 as $tableExpositore)
+                <div class="thumbnail">
+                    <img src="{{ $tableExpositore->foto }}" alt="Image" class="img-fluid">
+                </div>
+                <div class="pt-3">
+                    <h3>{{ $tableExpositore->Nombre }} {{ $tableExpositore->Apellidos }}</h3>
+                    <p>{{ $tableExpositore->X }}</p>
+                    <p><a href="#">Read More</a></p>
+                </div>
+            @endforeach
         </div>
-        <div class="pt-3">
-            <h3>{{ $tableExpositore->Nombre }}</h3>
-            <p>{{ $tableExpositore->X }}</p>
-            <p><a href="#">Read More</a></p>
-        </div>
-        @endforeach
     </div>
-</div>
-
+@endsection
+@section('contEx2')
+    <div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-0">
+        <div class="product-item-sm d-flex">
+            @foreach ($tableExpositoresCont2 as $tableExpositore)
+                <div class="thumbnail">
+                    <img src="{{ $tableExpositore->foto }}" alt="Image" class="img-fluid">
+                </div>
+                <div class="pt-3">
+                    <h3>{{ $tableExpositore->Nombre }} {{ $tableExpositore->Apellidos }}</h3>
+                    <p>{{ $tableExpositore->X }}</p>
+                    <p><a href="#">Read More</a></p>
+                </div>
+            @endforeach
+        </div>
+    </div>
+@endsection
+@section('contEx3')
+    <div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-0">
+        <div class="product-item-sm d-flex">
+            @foreach ($tableExpositoresCont3 as $tableExpositore)
+                <div class="thumbnail">
+                    <img src="{{ $tableExpositore->foto }}" alt="Image" class="img-fluid">
+                </div>
+                <div class="pt-3">
+                    <h3>{{ $tableExpositore->Nombre }} {{ $tableExpositore->Apellidos }}</h3>
+                    <p>{{ $tableExpositore->X }}</p>
+                    <p><a href="#">Read More</a></p>
+                </div>
+            @endforeach
+        </div>
+    </div>
 @endsection
