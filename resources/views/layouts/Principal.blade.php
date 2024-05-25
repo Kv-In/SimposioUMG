@@ -119,10 +119,8 @@
                         <p class="mb-4">
                             ¡Te invitamos a nuestro próximo simposio de Ingeniería en Sistemas 2024! Este evento reunirá
                             a destacados expertos de la industria y académicos para explorar las últimas innovaciones y
-                            tendencias en el campo de la ingeniería de sistemas.
-                        </p>
-                        <p><a href="" class="btn btn-secondary me-2">Mas...</a><a href="#"
-                                class="btn btn-white-outline">Incripciones</a></p>
+                            tendencias en el campo de ingeniería de sistemas.
+                       
                     </div>
                 </div>
                 <div class="col-lg-7">
