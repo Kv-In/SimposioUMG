@@ -348,7 +348,7 @@ a {
   top: 0;
   width: 100%;
   z-index: 1000;
-  background: #173636!important;
+  background: #232083!important;
   padding-top: 20px;
   padding-bottom: 20px; }
   .custom-navbar .navbar-brand {
@@ -381,7 +381,7 @@ a {
         bottom: 0;
         left: 8px;
         right: 8px;
-        background: #f9bf29;
+        background: #e0e0e0d4;
         height: 5px;
         opacity: 1;
         visibility: visible;
@@ -414,7 +414,7 @@ a {
 
  /* heda */        
 .hero {
-  background: #1B4242;
+  background: #ca0606;
   padding: calc(4rem - 30px) 0 0rem 0; }
   @media (min-width: 768px) {
     .hero {
@@ -436,7 +436,7 @@ a {
       .hero h1 {
         font-size: 54px; } }
   .hero p {
-    color: rgba(255, 255, 255, 0.5);
+    color: rgb(255, 255, 255);
     margin-botom: 30px; 
   }
 
@@ -780,7 +780,7 @@ textarea {
     vertical-align: middle;
     color: rgba(0, 0, 0, 0.8); }
   .site-blocks-table tbody tr:first-child td {
-    border-top: 1px solid #3b5d50 !important; }
+    border-top: 1px solid #453b5d !important; }
   .site-blocks-table .btn {
     background: none !important;
     color: #000000;
